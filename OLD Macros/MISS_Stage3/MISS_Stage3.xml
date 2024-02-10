@@ -1,0 +1,91 @@
+<mission_data version="1.65" background_id_arme="">
+  <start name_arme="Start">
+    <create type="player" x="7306.0" y="0.0" z="90531.0" angle="0" name="Artemis" />
+    <create count="50" type="mines" startAngle="0" endAngle="160" startX="56490.0" startY="0.0" startZ="43282.0" radius="35000" randomRange="20000" randomSeed="5" />
+    <create count="50" type="asteroids" startAngle="0" endAngle="160" startX="99412.0" startY="0.0" startZ="54326.0" radius="40000" randomRange="20000" randomSeed="5" />
+    <create count="5500" type="nebulas" startAngle="0" endAngle="360" startX="78919.0" startY="0.0" startZ="78918.0" radius="30000" randomRange="4000" randomSeed="5" />
+    <create count="80" type="mines" startAngle="0" endAngle="360" startX="78919.0" startY="0.0" startZ="78918.0" radius="30000" randomRange="3000" randomSeed="5" />
+    <create type="station" x="55124.0" y="0.0" z="12314.0" angle="0" name="Intermediate dock" />
+    <set_difficulty_level value="5" />
+    <set_skybox_index index="9" />
+    <big_message title="Stage 3" subtitle1="DHSIR" subtitle2="" />
+    <set_timer name="start_mission_timer_1" seconds="10" />
+    <set_timer name="game_timer" seconds="1200" />
+    <set_timer name="log_timer" seconds="1" />
+  </start>
+  <event name_arme="Create station 2 inside nebula" id_arme="55f152ee-a2a9-4658-b2cd-9c452a5c870c">
+    <if_docked name="Intermediate dock" />
+    <if_variable name="attack1" comparator="LESS" value="1.0" />
+    <set_variable name="attack1" value="1.0" />
+    <create type="station" x="92923.0" y="0.0" z="87571.0" angle="0" name=" Intermediate dock 2" />
+    <warning_popup_message message="Your next task is to dock at the intermediate dock 2" consoles="HWE" />
+    <log text="Dock in" />
+  </event>
+  <event name_arme="Final dock creation inside nebula" id_arme="ccf5a420-e01e-4207-a6de-20e509e19b5f">
+    <if_variable name="create_final_station_enemy" comparator="LESS" value="1.0" />
+    <if_variable name="Neb_attack" comparator="EQUALS" value="1.0" />
+    <if_not_exists name="EN1" />
+    <if_not_exists name="EN2" />
+    <set_variable name="create_final_station_enemy" value="1.0" />
+    <create type="station" x="61386.0" y="0.0" z="65483.0" angle="0" name="Final dock" />
+    <warning_popup_message message="Reach the final dock to finish game" consoles="HWE" />
+  </event>
+  <event name_arme="Station destroyed" id_arme="75cb8d8d-d8e7-4725-ba81-a7182ecacb3b">
+    <if_variable name="create_final_station_destroyed" comparator="LESS" value="1.0" />
+    <if_not_exists name=" Intermediate dock 2" />
+    <set_variable name="create_final_station_destroyed" value="1.0" />
+    <warning_popup_message message="Station destroyed. Never mind you can still destroy the enemy and get to the destination" consoles="HWE" />
+    <log text="Station destroyed" />
+    <!--This event checks if the station is destroyed if yes it logs it-->
+  </event>
+  <event name_arme="Player dead" id_arme="42c05830-ebd3-4c50-b6d6-b6cb9293e370">
+    <if_not_exists name="Artemis" />
+    <destroy name="Artemis" />
+    <create type="player" x="49887.0" y="0.0" z="27457.0" angle="0" name="Artemis" />
+    <warning_popup_message message="You get another chance." consoles="HWE" />
+    <set_object_property property="topSpeed" value="0.01" name="Artemis" />
+    <log text="Player Dead" />
+    <!--This handles if the player is dead. It respawns at a point closer to the enemy for second chance. Logs the data.-->
+  </event>
+  <event name_arme="Shield fault" id_arme="60d61ae5-3ae4-4fd1-9d8e-16f5a2e1bd82">
+    <if_inside_sphere name="Artemis" centerX="79338" centerY="0" centerZ="77444" radius="27000" />
+    <if_variable name="shild_fault" comparator="LESS" value="1.0" />
+    <set_variable name="shild_fault" value="1.0" />
+    <set_object_property property="shieldStateFront" value="5" name="Artemis" />
+    <warning_popup_message message="Shilds down....!" consoles="HWE" />
+    <log text="T2" />
+  </event>
+  <event name_arme="End game" id_arme="f68be1c7-c4fa-4986-b507-3182cf4ca57d">
+    <if_docked name="Final dock" />
+    <warning_popup_message message="Stage 3 complete" consoles="HWE" />
+    <end_mission />
+  </event>
+  <event name_arme="End game if twenty minutes over" id_arme="c0ad1933-7503-4f86-970e-67939e0a1ecd">
+    <if_timer_finished name="game_timer" />
+    <warning_popup_message message="Out of time - Game failed. Thanks for playing. " consoles="HWE" />
+    <log text="Game time over" />
+    <end_mission />
+  </event>
+  <event name_arme="Second timer for parsing timestamp" id_arme="d3c6543e-267e-4698-be4f-bdbffa3af963">
+    <if_timer_finished name="log_timer" />
+    <log text="SEC" />
+    <set_timer name="log_timer" seconds="1" />
+  </event>
+  <event name_arme="Neb_attack_new" id_arme="0c1a09a7-84aa-4280-8f75-0fca00b0784d">
+    <if_inside_sphere name="Artemis" centerX="79338" centerY="0" centerZ="77444" radius="27000" />
+    <if_variable name="Neb_attack" comparator="LESS" value="1.0" />
+    <set_variable name="Neb_attack" value="1.0" />
+    <create type="enemy" x="92581.0" y="0.0" z="84383.0" angle="0" name="EN2" fleetnumber="1" />
+    <create type="enemy" x="97021.0" y="0.0" z="70834.0" angle="180" name="EN1" fleetnumber="1" />
+    <clear_ai name="EN1" />
+    <clear_ai name="EN2" />
+    <add_ai type="ATTACK" targetName="Artemis" value1="1.3" name="EN2" />
+    <add_ai type="ATTACK" targetName=" Intermediate dock 2" value1="0.8" name="EN1" />
+  </event>
+  <event name_arme="Record outer nebula ring " id_arme="9f32ea42-6b3e-4bd1-aa2e-3172319d2935">
+    <if_inside_sphere name="Artemis" centerX="79338" centerY="0" centerZ="77444" radius="35000" />
+    <if_variable name="outer" comparator="LESS" value="1.0" />
+    <set_variable name="outer" value="1.0" />
+    <log text="T1" />
+  </event>
+</mission_data>

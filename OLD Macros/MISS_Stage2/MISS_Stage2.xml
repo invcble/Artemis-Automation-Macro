@@ -1,0 +1,252 @@
+<mission_data version="1.65" background_id_arme="">
+  <start name_arme="Start">
+    <create type="player" x="88596.0" y="0.0" z="87343.0" angle="0" name="Artemis" />
+    <create count="100" type="asteroids" startAngle="0" endAngle="360" startX="48634.0" startY="0.0" startZ="50796.0" radius="40000" randomRange="20000" randomSeed="5" />
+    <create count="10" type="asteroids" startX="51481.0" startY="0.0" startZ="29392.0" endX="51481.0" endY="0.0" endZ="29392.0" />
+    <create count="10" type="asteroids" startX="52619.0" startY="0.0" startZ="28709.0" endX="52619.0" endY="0.0" endZ="28709.0" />
+    <create count="10" type="asteroids" startX="53758.0" startY="0.0" startZ="27912.0" endX="53758.0" endY="0.0" endZ="27912.0" />
+    <create count="10" type="asteroids" startX="55124.0" startY="0.0" startZ="26888.0" endX="55124.0" endY="0.0" endZ="26888.0" />
+    <create count="10" type="asteroids" startX="56376.0" startY="0.0" startZ="25977.0" endX="56376.0" endY="0.0" endZ="25977.0" />
+    <create count="10" type="asteroids" startX="57856.0" startY="0.0" startZ="25180.0" endX="57856.0" endY="0.0" endZ="25180.0" />
+    <create count="10" type="asteroids" startX="46130.0" startY="0.0" startZ="33491.0" endX="46130.0" endY="0.0" endZ="33491.0" />
+    <create count="10" type="asteroids" startX="45446.0" startY="0.0" startZ="34060.0" endX="45446.0" endY="0.0" endZ="34060.0" />
+    <create count="10" type="asteroids" startX="44536.0" startY="0.0" startZ="34629.0" endX="44536.0" endY="0.0" endZ="34629.0" />
+    <create count="10" type="asteroids" startX="44080.0" startY="0.0" startZ="35199.0" endX="44080.0" endY="0.0" endZ="35199.0" />
+    <create count="10" type="asteroids" startX="43283.0" startY="0.0" startZ="35654.0" endX="43283.0" endY="0.0" endZ="35654.0" />
+    <create count="10" type="asteroids" startX="42600.0" startY="0.0" startZ="35996.0" endX="42600.0" endY="0.0" endZ="35996.0" />
+    <create count="10" type="asteroids" startX="42259.0" startY="0.0" startZ="36110.0" endX="42259.0" endY="0.0" endZ="36110.0" />
+    <create count="10" type="asteroids" startX="41234.0" startY="0.0" startZ="37134.0" endX="41234.0" endY="0.0" endZ="37134.0" />
+    <create count="10" type="asteroids" startX="51139.0" startY="0.0" startZ="29734.0" endX="51139.0" endY="0.0" endZ="29734.0" />
+    <create count="10" type="asteroids" startX="56945.0" startY="0.0" startZ="25294.0" endX="56945.0" endY="0.0" endZ="25294.0" />
+    <create count="10" type="asteroids" startX="56149.0" startY="0.0" startZ="25749.0" endX="56149.0" endY="0.0" endZ="25749.0" />
+    <create count="10" type="asteroids" startX="54782.0" startY="0.0" startZ="26888.0" endX="54782.0" endY="0.0" endZ="26888.0" />
+    <create count="10" type="asteroids" startX="53758.0" startY="0.0" startZ="27798.0" endX="53758.0" endY="0.0" endZ="27798.0" />
+    <create count="10" type="asteroids" startX="36794.0" startY="0.0" startZ="56489.0" endX="36794.0" endY="0.0" endZ="56489.0" />
+    <create count="10" type="asteroids" startX="37818.0" startY="0.0" startZ="55692.0" endX="37818.0" endY="0.0" endZ="55692.0" />
+    <create count="10" type="asteroids" startX="39071.0" startY="0.0" startZ="55237.0" endX="39071.0" endY="0.0" endZ="55237.0" />
+    <create count="10" type="asteroids" startX="40323.0" startY="0.0" startZ="55351.0" endX="40323.0" endY="0.0" endZ="55351.0" />
+    <create count="10" type="asteroids" startX="41689.0" startY="0.0" startZ="55464.0" endX="41689.0" endY="0.0" endZ="55464.0" />
+    <create count="10" type="asteroids" startX="43511.0" startY="0.0" startZ="55806.0" endX="43511.0" endY="0.0" endZ="55806.0" />
+    <create count="10" type="asteroids" startX="31556.0" startY="0.0" startZ="59677.0" endX="31556.0" endY="0.0" endZ="59677.0" />
+    <create count="10" type="asteroids" startX="31101.0" startY="0.0" startZ="59791.0" endX="31101.0" endY="0.0" endZ="59791.0" />
+    <create count="10" type="asteroids" startX="30873.0" startY="0.0" startZ="60360.0" endX="30873.0" endY="0.0" endZ="60360.0" />
+    <create count="10" type="asteroids" startX="30418.0" startY="0.0" startZ="61043.0" endX="30418.0" endY="0.0" endZ="61043.0" />
+    <create count="10" type="asteroids" startX="29735.0" startY="0.0" startZ="61954.0" endX="29735.0" endY="0.0" endZ="61954.0" />
+    <create count="10" type="asteroids" startX="29393.0" startY="0.0" startZ="63434.0" endX="29393.0" endY="0.0" endZ="63434.0" />
+    <create count="10" type="asteroids" startX="29166.0" startY="0.0" startZ="64800.0" endX="29166.0" endY="0.0" endZ="64800.0" />
+    <create count="10" type="asteroids" startX="29166.0" startY="0.0" startZ="65939.0" endX="29166.0" endY="0.0" endZ="65939.0" />
+    <create count="10" type="asteroids" startX="29166.0" startY="0.0" startZ="66850.0" endX="29166.0" endY="0.0" endZ="66850.0" />
+    <create count="10" type="asteroids" startX="17211.0" startY="0.0" startZ="9810.0" endX="17211.0" endY="0.0" endZ="9810.0" />
+    <create count="10" type="asteroids" startX="18236.0" startY="0.0" startZ="8899.0" endX="18236.0" endY="0.0" endZ="8899.0" />
+    <create count="10" type="asteroids" startX="18805.0" startY="0.0" startZ="8444.0" endX="18805.0" endY="0.0" endZ="8444.0" />
+    <create count="10" type="asteroids" startX="19602.0" startY="0.0" startZ="7533.0" endX="19602.0" endY="0.0" endZ="7533.0" />
+    <create count="10" type="asteroids" startX="20285.0" startY="0.0" startZ="5597.0" endX="20285.0" endY="0.0" endZ="5597.0" />
+    <create count="10" type="asteroids" startX="20285.0" startY="0.0" startZ="4914.0" endX="20285.0" endY="0.0" endZ="4914.0" />
+    <create count="10" type="asteroids" startX="20513.0" startY="0.0" startZ="3776.0" endX="20513.0" endY="0.0" endZ="3776.0" />
+    <create count="10" type="asteroids" startX="20627.0" startY="0.0" startZ="2979.0" endX="20627.0" endY="0.0" endZ="2979.0" />
+    <create count="10" type="asteroids" startX="20627.0" startY="0.0" startZ="2865.0" endX="20627.0" endY="0.0" endZ="2865.0" />
+    <create count="10" type="asteroids" startX="20627.0" startY="0.0" startZ="1954.0" endX="20627.0" endY="0.0" endZ="1954.0" />
+    <create count="10" type="asteroids" startX="12771.0" startY="0.0" startZ="12542.0" endX="12771.0" endY="0.0" endZ="12542.0" />
+    <create count="10" type="asteroids" startX="11177.0" startY="0.0" startZ="12998.0" endX="11177.0" endY="0.0" endZ="12998.0" />
+    <create count="10" type="asteroids" startX="10038.0" startY="0.0" startZ="13111.0" endX="10038.0" endY="0.0" endZ="13111.0" />
+    <create count="10" type="asteroids" startX="7989.0" startY="0.0" startZ="13339.0" endX="7989.0" endY="0.0" endZ="13339.0" />
+    <create count="10" type="asteroids" startX="6395.0" startY="0.0" startZ="13339.0" endX="6395.0" endY="0.0" endZ="13339.0" />
+    <create count="10" type="asteroids" startX="4460.0" startY="0.0" startZ="13339.0" endX="4460.0" endY="0.0" endZ="13339.0" />
+    <create count="10" type="asteroids" startX="2297.0" startY="0.0" startZ="13339.0" endX="2297.0" endY="0.0" endZ="13339.0" />
+    <create count="10" type="asteroids" startX="1386.0" startY="0.0" startZ="13339.0" endX="1386.0" endY="0.0" endZ="13339.0" />
+    <create count="10" type="asteroids" startX="8786.0" startY="0.0" startZ="13225.0" endX="8786.0" endY="0.0" endZ="13225.0" />
+    <create count="10" type="asteroids" startX="6167.0" startY="0.0" startZ="13225.0" endX="6167.0" endY="0.0" endZ="13225.0" />
+    <create count="10" type="asteroids" startX="3777.0" startY="0.0" startZ="12884.0" endX="3777.0" endY="0.0" endZ="12884.0" />
+    <create count="10" type="asteroids" startX="1500.0" startY="0.0" startZ="12998.0" endX="1500.0" endY="0.0" endZ="12998.0" />
+    <create type="station" x="82790.0" y="0.0" z="31100.0" angle="0" name="Intermediate dock" />
+    <create type="station" x="32809.0" y="0.0" z="58766.0" angle="0" name="AS2" />
+    <create type="station" x="35427.0" y="0.0" z="57286.0" angle="0" name="AS1" />
+    <create type="station" x="49659.0" y="0.0" z="30872.0" angle="0" name="AS3" />
+    <create type="station" x="47496.0" y="0.0" z="32694.0" angle="0" name="AS4" />
+    <create type="station" x="16414.0" y="0.0" z="10379.0" angle="0" name="AS5" />
+    <create type="station" x="13682.0" y="0.0" z="12087.0" angle="0" name="AS6" />
+    <set_difficulty_level value="5" />
+    <set_skybox_index index="9" />
+    <big_message title="Stage 2" subtitle1="DHSIR" subtitle2="" />
+    <set_timer name="start_mission_timer_1" seconds="10" />
+    <set_object_property property="countNuke" value="20" name="Artemis" />
+    <set_timer name="game_timer" seconds="1200" />
+    <set_timer name="log_timer" seconds="1" />
+  </start>
+  <event name_arme="Create escort" id_arme="42f184d9-fdcc-44c2-ba0f-6c2e7e232428">
+    <if_variable name="create_ESCORT" comparator="LESS" value="1.0" />
+    <if_docked name="Intermediate dock" />
+    <create type="neutral" x="47268.0" y="0.0" z="72428.0" angle="0" name="Intrepid" />
+    <add_ai type="POINT_THROTTLE" value1="36751" value2="0" value3="60410" value4="0.001" name="Intrepid" />
+    <!--<warning_popup_message value="0.0" message="Escort is ready to be escorted" consoles="HWE" />-->
+    <set_variable name="create_ESCORT" value="1.0" />
+    <!--Used to create a new escort once the user docks at the intermediate dock-->
+  </event>
+  <event name_arme="Reduce energy" id_arme="5b052d1b-2407-4842-93fd-90eec815922e">
+    <if_variable name="move_ESCORT" comparator="LESS" value="1.0" />
+    <if_inside_sphere name="Artemis" centerX="43944" centerY="0" centerZ="68927" radius="18000" />
+    <set_variable name="move_ESCORT" value="1.0" />
+    <clear_ai name="Intrepid" />
+    <add_ai type="POINT_THROTTLE" value1="36751" value2="0" value3="60410" value4="10.0" name="Intrepid" />
+    <warning_popup_message message="Intrepid started to move - make sure you break down all the hurdles in time. The timer is for 30 seconds, if you take more time the energy of the ESCORT ship drops" consoles="HWE" />
+    <set_timer name="energy_timer" seconds="30" />
+    <set_timer name="closeness_timer" seconds="5" />
+    <set_timer name="Far_timer" seconds="5" />
+    <log text="Object energy triggered" />
+    <!--Once the artemis is closer to escort ship, the timer starts to reduce the energy every 30 seconds. the artemis has to rush and destroy the stations asap.-->
+  </event>
+  <event name_arme="Energy condition check - 1" id_arme="826c86ea-7a62-4920-8b3e-0874b6a30f37">
+    <if_exists name="AS2" />
+    <if_exists name="AS1" />
+    <!--Energy depleted until it is destroyed-->
+    <if_timer_finished name="energy_timer" />
+    <warning_popup_message message="Energy of Intrepid reduced by 10 - in just 60 seconds" consoles="HWE" />
+    <log text="Energy of ESCORT reduced" />
+    <set_timer name="energy_timer" seconds="60" />
+  </event>
+  <event name_arme="Close watching check - timer controlled" id_arme="d0942a1f-442a-46ba-83e7-93e13bfcc4c5">
+    <if_timer_finished name="closeness_timer" />
+    <if_distance name1="Artemis" name2="Intrepid" comparator="LESS_EQUAL" value="1500.0" />
+    <set_timer name="closeness_timer" seconds="5" />
+    <log text="CLOSE" />
+  </event>
+  <event name_arme="Far watching check - timer controlled" id_arme="66bee341-3f57-4c6d-9fb5-7b031551759a">
+    <if_timer_finished name="Far_timer" />
+    <if_distance name1="Artemis" name2="Intrepid" comparator="GREATER" value="1500.0" />
+    <set_timer name="Far_timer" seconds="5" />
+    <log text="FAR" />
+  </event>
+  <event name_arme="Far notification event" id_arme="eef1aa1d-dac6-4be5-b5ab-06e4c399a762">
+    <if_variable name="far_notify" comparator="LESS" value="1.0" />
+    <if_distance name1="Artemis" name2="Intrepid" comparator="GREATER" value="1500.0" />
+    <set_variable name="far_notify" value="1.0" />
+    <warning_popup_message message="Out of range from Intrepid- you should be 1500 meters closer. " consoles="HWE" />
+    <set_variable name="close_notify" value="0.0" />
+  </event>
+  <event name_arme="Close notification event" id_arme="315fdff4-4580-4ad0-a5be-22f5f5072c9f">
+    <if_variable name="close_notify" comparator="LESS" value="1.0" />
+    <if_distance name1="Artemis" name2="Intrepid" comparator="LESS_EQUAL" value="1500.0" />
+    <set_variable name="close_notify" value="1.0" />
+    <warning_popup_message message="In range Good. " consoles="HWE" />
+    <set_variable name="far_notify" value="0.0" />
+  </event>
+  <event name_arme="Stop before move_2" id_arme="82a35579-f4a0-485a-929e-d56bac5770d2">
+    <if_inside_sphere name="Intrepid" centerX="36751" centerY="0" centerZ="60410" radius="500" />
+    <if_exists name="AS1" />
+    <if_exists name="AS2" />
+    <if_variable name="escort_stop_1" comparator="LESS" value="1.0" />
+    <clear_ai name="Intrepid" />
+    <add_ai type="POINT_THROTTLE" value1="34859" value2="0" value3="58895" value4="0.001" name="Intrepid" />
+    <log text="Escort stop 1" />
+    <set_variable name="escort_stop_1" value="1.0" />
+  </event>
+  <event name_arme="Move 2 " id_arme="2112b784-c581-4f11-a481-e7c47aad5fc7">
+    <if_not_exists name="AS1" />
+    <if_not_exists name="AS2" />
+    <if_variable name="move_2" comparator="LESS" value="1.0" />
+    <set_variable name="move_2" value="1.0" />
+    <clear_ai name="Intrepid" />
+    <add_ai type="POINT_THROTTLE" value1="27288" value2="0" value3="45457" value4="3.0" name="Intrepid" />
+    <log text="Move 2" />
+  </event>
+  <event name_arme="Move 3" id_arme="a83bfb33-9124-4789-bf6e-234f6198d030">
+    <if_inside_sphere name="Intrepid" centerX="27288" centerY="0" centerZ="45457" radius="100" />
+    <if_variable name="move_3" comparator="LESS" value="1.0" />
+    <clear_ai name="Intrepid" />
+    <add_ai type="POINT_THROTTLE" value1="51136" value2="0" value3="33911" value4="8.0" name="Intrepid" />
+    <log text="Move 3" />
+    <set_variable name="move_3" value="1.0" />
+  </event>
+  <event name_arme="Stop before move_4" id_arme="7f0f4a68-5dca-45cb-85af-852553cafc66">
+    <if_inside_sphere name="Intrepid" centerX="51136.0" centerY="0" centerZ="33911.0" radius="500" />
+    <if_exists name="AS3" />
+    <if_exists name="AS4" />
+    <if_variable name="escort_stop_2" comparator="LESS" value="1.0" />
+    <clear_ai name="Intrepid" />
+    <add_ai type="POINT_THROTTLE" value1="49811" value2="0" value3="32018" value4="0.001" name="Intrepid" />
+    <log text="Escort stop 2" />
+    <set_variable name="escort_stop_2" value="1.0" />
+  </event>
+  <event name_arme="Energy condition check - 2" id_arme="e960c66c-97c1-420d-85ae-4d894b57c1c0">
+    <if_variable name="move_3" comparator="EQUALS" value="1.0" />
+    <if_exists name="AS3" />
+    <if_exists name="AS4" />
+    <!--Energy depleted until it is destroyed - After move 3-->
+    <if_timer_finished name="energy_timer" />
+    <warning_popup_message message="Energy of Intrepid reduced by 10 - in just 40 seconds" consoles="HWE" />
+    <log text="Energy of ESCORT reduced" />
+    <set_timer name="energy_timer" seconds="40" />
+  </event>
+  <event name_arme="Move 4" id_arme="d116db64-3d5c-4ad9-bf67-5962ef942d4c">
+    <if_not_exists name="AS3" />
+    <if_not_exists name="AS4" />
+    <!--Done with move 3 and now the condition can take place-->
+    <if_variable name="move_3" comparator="EQUALS" value="1.0" />
+    <if_variable name="move_4" comparator="LESS" value="1.0" />
+    <set_variable name="move_4" value="1.0" />
+    <clear_ai name="Intrepid" />
+    <add_ai type="POINT_THROTTLE" value1="17445" value2="0" value3="13280" value4="6.0" name="Intrepid" />
+    <log text="Move 4" />
+  </event>
+  <event name_arme="Energy condition check - 3" id_arme="d251e3d8-0246-4093-9859-6b6e34616e11">
+    <if_variable name="move_4" comparator="EQUALS" value="1.0" />
+    <if_exists name="AS5" />
+    <if_exists name="AS6" />
+    <!--Energy depleted until it is destroyed - After move 4-->
+    <if_timer_finished name="energy_timer" />
+    <warning_popup_message message="Energy of Intrepid reduced by 10 - in just 30 seconds" consoles="HWE" />
+    <log text="Energy of ESCORT reduced" />
+    <set_timer name="energy_timer" seconds="30" />
+  </event>
+  <event name_arme="Stop before move_5" id_arme="4db269aa-fe15-4d8f-80c2-709332940358">
+    <if_inside_sphere name="Intrepid" centerX="17445.0" centerY="0" centerZ="13280.0" radius="500" />
+    <if_exists name="AS5" />
+    <if_exists name="AS6" />
+    <if_variable name="escort_stop_3" comparator="LESS" value="1.0" />
+    <clear_ai name="Intrepid" />
+    <add_ai type="POINT_THROTTLE" value1="16310" value2="0" value3="13280.0" value4="0.001" name="Intrepid" />
+    <log text="Escort stop 3" />
+    <set_variable name="escort_stop_3" value="1.0" />
+  </event>
+  <event name_arme="Move 5" id_arme="facf3157-b44c-4712-85f7-5f3ee8d5520e">
+    <if_not_exists name="AS5" />
+    <if_not_exists name="AS6" />
+    <!--Done with move 4 and now the condition can take place-->
+    <if_variable name="move_4" comparator="EQUALS" value="1.0" />
+    <if_variable name="move_5" comparator="LESS" value="1.0" />
+    <set_variable name="move_5" value="1.0" />
+    <create type="station" x="7989.0" y="0.0" z="4914.0" angle="0" name="Final dock" />
+    <clear_ai name="Intrepid" />
+    <add_ai type="POINT_THROTTLE" value1="8928" value2="0" value3="5520" value4="5.0" name="Intrepid" />
+    <log text="Move 5" />
+  </event>
+  <event name_arme="Final stop ESCORT" id_arme="f50530e3-de91-48b7-b02c-7f32d6650e78">
+    <if_inside_sphere name="Intrepid" centerX="8928.0" centerY="0" centerZ="5520.0" radius="500" />
+    <if_not_exists name="AS5" />
+    <if_not_exists name="AS6" />
+    <if_variable name="escort_stop_4" comparator="LESS" value="1.0" />
+    <clear_ai name="Intrepid" />
+    <add_ai type="POINT_THROTTLE" value1="16310" value2="0" value3="13280.0" value4="0.001" name="Intrepid" />
+    <log text="Final ESCORT stop" />
+    <set_variable name="escort_stop_4" value="1.0" />
+  </event>
+  <event name_arme="End when player docked and ESCORT ends at final position" id_arme="622ecd6b-288c-49ec-80bd-7c4894d30f72">
+    <if_inside_sphere name="Intrepid" centerX="8928" centerY="0" centerZ="5520" radius="500" />
+    <if_docked name="Final dock" />
+    <if_variable name="move_5" comparator="EQUALS" value="1.0" />
+    <log text="Final dock" />
+    <warning_popup_message message="Good job - you are done with stage 2 - Be ready for stage 3" consoles="HWE" />
+    <end_mission />
+  </event>
+  <event name_arme="End game if twenty minutes over" id_arme="c0ad1933-7503-4f86-970e-67939e0a1ecd">
+    <if_timer_finished name="game_timer" />
+    <warning_popup_message message="Out of time - Game failed. Thanks for playing. " consoles="HWE" />
+    <log text="Game time over" />
+    <end_mission />
+  </event>
+  <event name_arme="Second timer for parsing timestamp" id_arme="d3c6543e-267e-4698-be4f-bdbffa3af963">
+    <if_timer_finished name="log_timer" />
+    <log text="SEC" />
+    <set_timer name="log_timer" seconds="1" />
+  </event>
+</mission_data>

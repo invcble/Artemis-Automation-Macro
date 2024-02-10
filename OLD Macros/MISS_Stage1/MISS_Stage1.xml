@@ -1,0 +1,67 @@
+<mission_data version="1.65" background_id_arme="">
+  <start name_arme="Start">
+    <create type="player" x="88596.0" y="0.0" z="87343.0" angle="0" name="Artemis" />
+    <create count="50" type="mines" startAngle="0" endAngle="160" startX="56490.0" startY="0.0" startZ="43282.0" radius="35000" randomRange="20000" randomSeed="5" />
+    <create count="50" type="asteroids" startAngle="0" endAngle="160" startX="99412.0" startY="0.0" startZ="54326.0" radius="40000" randomRange="20000" randomSeed="5" />
+    <create type="station" x="55124.0" y="0.0" z="12314.0" angle="0" name="Intermediate dock" />
+    <create type="enemy" x="44308.0" y="0.0" z="9240.0" angle="220" name="EN1" fleetnumber="1" />
+    <add_ai type="TARGET_THROTTLE" targetName="Intermediate dock" value1="0.0001" name="EN1" />
+    <set_difficulty_level value="5" />
+    <set_skybox_index index="9" />
+    <big_message title="Stage 1" subtitle1="DHSIR" subtitle2="" />
+    <set_timer name="start_mission_timer_1" seconds="10" />
+    <set_timer name="game_timer" seconds="1200" />
+    <set_timer name="log_timer" seconds="1" />
+  </start>
+  <event id_arme="55f152ee-a2a9-4658-b2cd-9c452a5c870c">
+    <if_variable name="attack1" comparator="LESS" value="1.0" />
+    <if_exists name="Intermediate dock" />
+    <if_inside_sphere name="Artemis" centerX="55111" centerY="0" centerZ="12712" radius="12000" />
+    <set_variable name="attack1" value="1.0" />
+    <warning_popup_message message="Intermediate dock is under attack. Destroy the enemy and dock your ship to get t o your final destination." consoles="HWE" />
+    <clear_ai name="EN1" />
+    <add_ai type="ATTACK" targetName="Intermediate dock" value1="1.0" name="EN1" />
+    <log text="Dock in" />
+    <!--Once the artemis comes closer to dock at the station, the enemy pops up with a warning message. The artemis has to fight the enemy moving at throttle 100% and get the dock back to go for next step. -->
+  </event>
+  <event id_arme="4aa62b7e-4747-4868-a93a-c6ae1d1c43a6">
+    <if_variable name="create_final_station_enemy" comparator="LESS" value="1.0" />
+    <if_not_exists name="EN1" />
+    <set_variable name="create_final_station_enemy" value="1.0" />
+    <create type="station" x="3777.0" y="0.0" z="63434.0" angle="0" name="Final dock" />
+    <log text="Enemy killed" />
+    <!--This event creates a new station when the enemy is killed. Logs the entry.-->
+  </event>
+  <event id_arme="75cb8d8d-d8e7-4725-ba81-a7182ecacb3b">
+    <if_variable name="create_final_station_destroyed" comparator="LESS" value="1.0" />
+    <if_not_exists name="Intermediate dock" />
+    <set_variable name="create_final_station_destroyed" value="1.0" />
+    <warning_popup_message message="Station destroyed. Never mind you can still destroy the enemy and get to the destination" consoles="HWE" />
+    <log text="Station destroyed" />
+    <!--This event checks if the station is destroyed if yes it logs it-->
+  </event>
+  <event name_arme="Player dead gets another chance" id_arme="42c05830-ebd3-4c50-b6d6-b6cb9293e370">
+    <if_not_exists name="Artemis" />
+    <destroy name="Artemis" />
+    <create type="player" x="50228.0" y="0.0" z="26660.0" angle="0" name="Artemis" />
+    <warning_popup_message message="You get another chance." consoles="HWE" />
+    <log text="Player Dead" />
+    <!--This handles if the player is dead. It respawns at a point closer to the enemy for second chance. Logs the data.-->
+  </event>
+  <event id_arme="c0ad1933-7503-4f86-970e-67939e0a1ecd">
+    <if_docked name="Final dock" />
+    <warning_popup_message message="Stage 1 complete" consoles="HWE" />
+    <end_mission />
+  </event>
+  <event name_arme="End game if twenty minutes over" id_arme="58445e09-ef42-47d4-b072-437a683a74f7">
+    <if_timer_finished name="game_timer" />
+    <warning_popup_message message="Out of time - Game failed. Thanks for playing. " consoles="HWE" />
+    <log text="Game time over" />
+    <end_mission />
+  </event>
+  <event name_arme="Second timer for parsing timestamp" id_arme="d3c6543e-267e-4698-be4f-bdbffa3af963">
+    <if_timer_finished name="log_timer" />
+    <log text="SEC" />
+    <set_timer name="log_timer" seconds="1" />
+  </event>
+</mission_data>
