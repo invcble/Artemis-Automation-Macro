@@ -1,0 +1,948 @@
+        0       RESUME                          0
+        2       LOAD_CONST                      0: 0
+        4       LOAD_CONST                      1: None
+        6       IMPORT_NAME                     0: shutil
+        8       STORE_NAME                      0: shutil
+        10      LOAD_CONST                      0: 0
+        12      LOAD_CONST                      1: None
+        14      IMPORT_NAME                     1: os
+        16      STORE_NAME                      1: os
+        18      LOAD_CONST                      0: 0
+        20      LOAD_CONST                      1: None
+        22      IMPORT_NAME                     2: sys
+        24      STORE_NAME                      2: sys
+        26      LOAD_CONST                      0: 0
+        28      LOAD_CONST                      1: None
+        30      IMPORT_NAME                     3: xlsxwriter
+        32      STORE_NAME                      3: xlsxwriter
+        34      LOAD_CONST                      0: 0
+        36      LOAD_CONST                      2: ('datetime',)
+        38      IMPORT_NAME                     4: datetime
+        40      IMPORT_FROM                     4: datetime
+        42      STORE_NAME                      4: datetime
+        44      POP_TOP
+        46      LOAD_CONST                      0: 0
+        48      LOAD_CONST                      1: None
+        50      IMPORT_NAME                     5: zipfile
+        52      STORE_NAME                      5: zipfile
+        54      LOAD_CONST                      0: 0
+        56      LOAD_CONST                      1: None
+        58      IMPORT_NAME                     6: pyautogui
+        60      STORE_NAME                      7: pag
+        62      PUSH_NULL
+        64      LOAD_NAME                       4: datetime
+        66      LOAD_ATTR                       16: Hour
+        86      CALL                            0
+        94      LOAD_ATTR                       18: Min
+        114     STORE_NAME                      10: MM
+        116     PUSH_NULL
+        118     LOAD_NAME                       4: datetime
+        120     LOAD_ATTR                       16: Hour
+        140     CALL                            0
+        148     LOAD_ATTR                       22: getattr
+        168     STORE_NAME                      12: DD
+        170     PUSH_NULL
+        172     LOAD_NAME                       4: datetime
+        174     LOAD_ATTR                       16: Hour
+        194     CALL                            0
+        202     LOAD_ATTR                       26: application_path
+        222     LOAD_CONST                      3: 2000
+        224     BINARY_OP                       10 (-)
+        228     STORE_NAME                      14: YY
+        230     PUSH_NULL
+        232     LOAD_NAME                       4: datetime
+        234     LOAD_ATTR                       16: Hour
+        254     CALL                            0
+        262     LOAD_ATTR                       30: ID
+        282     STORE_NAME                      16: Hour
+        284     PUSH_NULL
+        286     LOAD_NAME                       4: datetime
+        288     LOAD_ATTR                       16: Hour
+        308     CALL                            0
+        316     LOAD_ATTR                       34: add_worksheet
+        336     STORE_NAME                      18: Min
+        338     PUSH_NULL
+        340     LOAD_NAME                       7: pag
+        342     LOAD_ATTR                       38: headers
+        362     LOAD_CONST                      4: 'Press OK to collect LOG files'
+        364     CALL                            1
+        372     STORE_NAME                      20: answer
+        374     LOAD_NAME                       20: answer
+        376     LOAD_CONST                      5: 'OK'
+        378     COMPARE_OP                      40 (==)
+        382     POP_JUMP_IF_FALSE               1 (to 386)
+        384     JUMP_FORWARD                    17 (to 420)
+        386     PUSH_NULL
+        388     LOAD_NAME                       2: sys
+        390     LOAD_ATTR                       42: worksheet
+        410     CALL                            0
+        418     POP_TOP
+        420     PUSH_NULL
+        422     LOAD_NAME                       22: getattr
+        424     LOAD_NAME                       2: sys
+        426     LOAD_CONST                      6: 'frozen'
+        428     LOAD_CONST                      7: False
+        430     CALL                            3
+        438     POP_JUMP_IF_FALSE               38 (to 516)
+        440     LOAD_NAME                       1: os
+        442     LOAD_ATTR                       46: sec
+        462     LOAD_ATTR                       49: station_destroyed
+        482     LOAD_NAME                       2: sys
+        484     LOAD_ATTR                       50: enemy_killed
+        504     CALL                            1
+        512     STORE_NAME                      26: application_path
+        514     JUMP_FORWARD                    27 (to 570)
+        516     LOAD_NAME                       1: os
+        518     LOAD_ATTR                       46: sec
+        538     LOAD_ATTR                       49: station_destroyed
+        558     LOAD_NAME                       27: __file__
+        560     CALL                            1
+        568     STORE_NAME                      26: application_path
+        570     NOP
+        572     PUSH_NULL
+        574     LOAD_NAME                       0: shutil
+        576     LOAD_ATTR                       56: t2
+        596     LOAD_CONST                      8: 'C:\\Program Files (x86)\\Artemis\\dat\\Missions\\MISS_Stage1\\MISS_Stage1_LOG.txt'
+        598     LOAD_NAME                       26: application_path
+        600     CALL                            2
+        608     POP_TOP
+        610     NOP
+        612     PUSH_NULL
+        614     LOAD_NAME                       0: shutil
+        616     LOAD_ATTR                       56: t2
+        636     LOAD_CONST                      10: 'C:\\Program Files (x86)\\Artemis\\dat\\Missions\\MISS_Stage2\\MISS_Stage2_LOG.txt'
+        638     LOAD_NAME                       26: application_path
+        640     CALL                            2
+        648     POP_TOP
+        650     NOP
+        652     PUSH_NULL
+        654     LOAD_NAME                       0: shutil
+        656     LOAD_ATTR                       56: t2
+        676     LOAD_CONST                      12: 'C:\\Program Files (x86)\\Artemis\\dat\\Missions\\MISS_Stage3\\MISS_Stage3_LOG.txt'
+        678     LOAD_NAME                       26: application_path
+        680     CALL                            2
+        688     POP_TOP
+        690     LOAD_CONST                      14: '1'
+        692     LOAD_NAME                       10: MM
+        694     LOAD_CONST                      15: '02d'
+        696     FORMAT_VALUE                    4
+        698     BINARY_OP                       0 (+)
+        702     LOAD_NAME                       12: DD
+        704     LOAD_CONST                      15: '02d'
+        706     FORMAT_VALUE                    4
+        708     BINARY_OP                       0 (+)
+        712     LOAD_NAME                       14: YY
+        714     LOAD_CONST                      15: '02d'
+        716     FORMAT_VALUE                    4
+        718     BINARY_OP                       0 (+)
+        722     LOAD_NAME                       16: Hour
+        724     LOAD_CONST                      15: '02d'
+        726     FORMAT_VALUE                    4
+        728     BINARY_OP                       0 (+)
+        732     LOAD_NAME                       18: Min
+        734     LOAD_CONST                      15: '02d'
+        736     FORMAT_VALUE                    4
+        738     BINARY_OP                       0 (+)
+        742     STORE_NAME                      30: ID
+        744     LOAD_NAME                       26: application_path
+        746     LOAD_CONST                      16: '\\MISS_Stage1_LOG.txt'
+        748     BINARY_OP                       0 (+)
+        752     LOAD_NAME                       26: application_path
+        754     LOAD_CONST                      17: '\\MISS_Stage2_LOG.txt'
+        756     BINARY_OP                       0 (+)
+        760     LOAD_NAME                       26: application_path
+        762     LOAD_CONST                      18: '\\MISS_Stage3_LOG.txt'
+        764     BINARY_OP                       0 (+)
+        768     BUILD_LIST                      3
+        770     STORE_NAME                      31: files_to_read
+        772     PUSH_NULL
+        774     LOAD_NAME                       3: xlsxwriter
+        776     LOAD_ATTR                       64: t3
+        796     LOAD_CONST                      19: 'Performance_Metrics_'
+        798     LOAD_NAME                       30: ID
+        800     BINARY_OP                       0 (+)
+        804     LOAD_CONST                      20: '.xlsx'
+        806     BINARY_OP                       0 (+)
+        810     CALL                            1
+        818     STORE_NAME                      33: workbook
+        820     LOAD_NAME                       33: workbook
+        822     LOAD_ATTR                       69: zip_file_path
+        842     LOAD_CONST                      21: 'Stage 1'
+        844     CALL                            1
+        852     STORE_NAME                      35: worksheet_1
+        854     LOAD_NAME                       33: workbook
+        856     LOAD_ATTR                       69: zip_file_path
+        876     LOAD_CONST                      22: 'Stage 2'
+        878     CALL                            1
+        886     STORE_NAME                      36: worksheet_2
+        888     LOAD_NAME                       33: workbook
+        890     LOAD_ATTR                       69: zip_file_path
+        910     LOAD_CONST                      23: 'Stage 3'
+        912     CALL                            1
+        920     STORE_NAME                      37: worksheet_3
+        922     BUILD_LIST                      0
+        924     LOAD_CONST                      24: ('Artemis destroyed', 'Base destroyed', 'Start_to_Dock1', 'Dock1_to_End', 'Total time', 'Game over', 'Beams fired', 'Torpedos fired', 'Enemies destroyed', 'Shots hit by enemy', 'Mines detonation')
+        926     LIST_EXTEND                     1
+        928     BUILD_LIST                      0
+        930     LOAD_CONST                      25: ('CLOSE', 'FAR', 'Energy reduced', 'Start_to_Intrepid', 'First escort', 'Second escort', 'Third escort', 'Total time', 'Game over', 'Beams fired', 'Torpedos fired', 'Enemies destroyed', 'Shots hit by enemy', 'Mines detonation')
+        932     LIST_EXTEND                     1
+        934     BUILD_LIST                      0
+        936     LOAD_CONST                      26: ('Artemis destroyed', 'Base destroyed', 'Start_to_Dock1', 'Dock1_to_OutNeb', 'OutNeb_to_InNeb', 'InNeb_to_End', 'Total time', 'Game over', 'Beams fired', 'Torpedos fired', 'Enemies destroyed', 'Shots hit by enemy', 'Mines detonation')
+        938     LIST_EXTEND                     1
+        940     BUILD_LIST                      3
+        942     STORE_NAME                      38: headers
+        944     LOAD_NAME                       35: worksheet_1
+        946     LOAD_NAME                       36: worksheet_2
+        948     LOAD_NAME                       37: worksheet_3
+        950     BUILD_LIST                      3
+        952     STORE_NAME                      39: worksheets
+        954     PUSH_NULL
+        956     LOAD_NAME                       40: enumerate
+        958     LOAD_NAME                       39: worksheets
+        960     CALL                            1
+        968     GET_ITER
+        970     FOR_ITER                        92 (to 1156)
+        974     UNPACK_SEQUENCE                 2
+        978     STORE_NAME                      41: i
+        980     STORE_NAME                      42: worksheet
+        982     PUSH_NULL
+        984     LOAD_NAME                       40: enumerate
+        986     LOAD_NAME                       38: headers
+        988     LOAD_NAME                       41: i
+        990     BINARY_SUBSCR
+        994     CALL                            1
+        1002    GET_ITER
+        1004    FOR_ITER                        73 (to 1152)
+        1008    UNPACK_SEQUENCE                 2
+        1012    STORE_NAME                      43: col
+        1014    STORE_NAME                      44: header
+        1016    LOAD_NAME                       42: worksheet
+        1018    LOAD_ATTR                       91 <INVALID>
+        1038    LOAD_CONST                      0: 0
+        1040    LOAD_NAME                       43: col
+        1042    LOAD_NAME                       44: header
+        1044    CALL                            3
+        1052    POP_TOP
+        1054    LOAD_NAME                       44: header
+        1056    LOAD_CONST                      27: 'Beams fired'
+        1058    COMPARE_OP                      55 (!=)
+        1062    POP_JUMP_IF_TRUE                1 (to 1066)
+        1064    JUMP_BACKWARD                   31 (to 1004)
+        1066    LOAD_NAME                       44: header
+        1068    LOAD_CONST                      28: 'Torpedos fired'
+        1070    COMPARE_OP                      55 (!=)
+        1074    POP_JUMP_IF_TRUE                1 (to 1078)
+        1076    JUMP_BACKWARD                   37 (to 1004)
+        1078    LOAD_NAME                       44: header
+        1080    LOAD_CONST                      29: 'Enemies destroyed'
+        1082    COMPARE_OP                      55 (!=)
+        1086    POP_JUMP_IF_TRUE                1 (to 1090)
+        1088    JUMP_BACKWARD                   43 (to 1004)
+        1090    LOAD_NAME                       44: header
+        1092    LOAD_CONST                      30: 'Shots hit by enemy'
+        1094    COMPARE_OP                      55 (!=)
+        1098    POP_JUMP_IF_TRUE                1 (to 1102)
+        1100    JUMP_BACKWARD                   49 (to 1004)
+        1102    LOAD_NAME                       44: header
+        1104    LOAD_CONST                      31: 'Mines detonation'
+        1106    COMPARE_OP                      55 (!=)
+        1110    POP_JUMP_IF_TRUE                1 (to 1114)
+        1112    JUMP_BACKWARD                   55 (to 1004)
+        1114    LOAD_NAME                       42: worksheet
+        1116    LOAD_ATTR                       91 <INVALID>
+        1136    LOAD_CONST                      32: 1
+        1138    LOAD_NAME                       43: col
+        1140    LOAD_CONST                      0: 0
+        1142    CALL                            3
+        1150    POP_TOP
+        1152    JUMP_BACKWARD                   75 (to 1004)
+        1154    END_FOR
+        1156    JUMP_BACKWARD                   94 (to 970)
+        1158    END_FOR
+        1160    LOAD_CONST                      0: 0
+        1162    STORE_NAME                      46: sec
+        1164    LOAD_CONST                      0: 0
+        1166    STORE_NAME                      47: dock_in
+        1168    LOAD_CONST                      0: 0
+        1170    STORE_NAME                      48: player_dead
+        1172    LOAD_CONST                      0: 0
+        1174    STORE_NAME                      49: station_destroyed
+        1176    LOAD_CONST                      0: 0
+        1178    STORE_NAME                      50: enemy_killed
+        1180    LOAD_CONST                      0: 0
+        1182    STORE_NAME                      51: game_time_over
+        1184    NOP
+        1186    PUSH_NULL
+        1188    LOAD_NAME                       52: open
+        1190    LOAD_NAME                       31: files_to_read
+        1192    LOAD_CONST                      0: 0
+        1194    BINARY_SUBSCR
+        1198    LOAD_CONST                      33: 'r'
+        1200    CALL                            2
+        1208    BEFORE_WITH
+        1210    STORE_NAME                      53: log
+        1212    LOAD_NAME                       53: log
+        1214    GET_ITER
+        1216    FOR_ITER                        62 (to 1342)
+        1220    STORE_NAME                      54: line
+        1222    LOAD_NAME                       54: line
+        1224    LOAD_CONST                      34: 'SEC\n'
+        1226    COMPARE_OP                      40 (==)
+        1230    POP_JUMP_IF_FALSE               6 (to 1244)
+        1232    LOAD_NAME                       46: sec
+        1234    LOAD_CONST                      32: 1
+        1236    BINARY_OP                       13 (+=)
+        1240    STORE_NAME                      46: sec
+        1242    JUMP_BACKWARD                   14 (to 1216)
+        1244    LOAD_NAME                       54: line
+        1246    LOAD_CONST                      35: 'Dock in\n'
+        1248    COMPARE_OP                      40 (==)
+        1252    POP_JUMP_IF_FALSE               3 (to 1260)
+        1254    LOAD_NAME                       46: sec
+        1256    STORE_NAME                      47: dock_in
+        1258    JUMP_BACKWARD                   22 (to 1216)
+        1260    LOAD_NAME                       54: line
+        1262    LOAD_CONST                      36: 'Player Dead\n'
+        1264    COMPARE_OP                      40 (==)
+        1268    POP_JUMP_IF_FALSE               6 (to 1282)
+        1270    LOAD_NAME                       48: player_dead
+        1272    LOAD_CONST                      32: 1
+        1274    BINARY_OP                       13 (+=)
+        1278    STORE_NAME                      48: player_dead
+        1280    JUMP_BACKWARD                   33 (to 1216)
+        1282    LOAD_NAME                       54: line
+        1284    LOAD_CONST                      37: 'Station destroyed\n'
+        1286    COMPARE_OP                      40 (==)
+        1290    POP_JUMP_IF_FALSE               6 (to 1304)
+        1292    LOAD_NAME                       49: station_destroyed
+        1294    LOAD_CONST                      32: 1
+        1296    BINARY_OP                       13 (+=)
+        1300    STORE_NAME                      49: station_destroyed
+        1302    JUMP_BACKWARD                   44 (to 1216)
+        1304    LOAD_NAME                       54: line
+        1306    LOAD_CONST                      38: 'Enemy killed\n'
+        1308    COMPARE_OP                      40 (==)
+        1312    POP_JUMP_IF_FALSE               6 (to 1326)
+        1314    LOAD_NAME                       50: enemy_killed
+        1316    LOAD_CONST                      32: 1
+        1318    BINARY_OP                       13 (+=)
+        1322    STORE_NAME                      50: enemy_killed
+        1324    JUMP_BACKWARD                   55 (to 1216)
+        1326    LOAD_NAME                       54: line
+        1328    LOAD_CONST                      39: 'Game time over\n'
+        1330    COMPARE_OP                      40 (==)
+        1334    POP_JUMP_IF_TRUE                1 (to 1338)
+        1336    JUMP_BACKWARD                   61 (to 1216)
+        1338    LOAD_CONST                      32: 1
+        1340    STORE_NAME                      51: game_time_over
+        1342    JUMP_BACKWARD                   64 (to 1216)
+        1344    END_FOR
+        1346    NOP
+        1348    LOAD_CONST                      1: None
+        1350    LOAD_CONST                      1: None
+        1352    LOAD_CONST                      1: None
+        1354    CALL                            2
+        1362    POP_TOP
+        1364    LOAD_NAME                       47: dock_in
+        1366    STORE_NAME                      55: t1
+        1368    LOAD_NAME                       46: sec
+        1370    LOAD_NAME                       47: dock_in
+        1372    BINARY_OP                       10 (-)
+        1376    STORE_NAME                      56: t2
+        1378    LOAD_NAME                       35: worksheet_1
+        1380    LOAD_ATTR                       91 <INVALID>
+        1400    LOAD_CONST                      32: 1
+        1402    LOAD_CONST                      0: 0
+        1404    LOAD_NAME                       48: player_dead
+        1406    CALL                            3
+        1414    POP_TOP
+        1416    LOAD_NAME                       35: worksheet_1
+        1418    LOAD_ATTR                       91 <INVALID>
+        1438    LOAD_CONST                      32: 1
+        1440    LOAD_CONST                      32: 1
+        1442    LOAD_NAME                       49: station_destroyed
+        1444    CALL                            3
+        1452    POP_TOP
+        1454    LOAD_NAME                       35: worksheet_1
+        1456    LOAD_ATTR                       91 <INVALID>
+        1476    LOAD_CONST                      32: 1
+        1478    LOAD_CONST                      40: 2
+        1480    LOAD_NAME                       55: t1
+        1482    CALL                            3
+        1490    POP_TOP
+        1492    LOAD_NAME                       35: worksheet_1
+        1494    LOAD_ATTR                       91 <INVALID>
+        1514    LOAD_CONST                      32: 1
+        1516    LOAD_CONST                      41: 3
+        1518    LOAD_NAME                       56: t2
+        1520    CALL                            3
+        1528    POP_TOP
+        1530    LOAD_NAME                       35: worksheet_1
+        1532    LOAD_ATTR                       91 <INVALID>
+        1552    LOAD_CONST                      32: 1
+        1554    LOAD_CONST                      42: 4
+        1556    LOAD_NAME                       46: sec
+        1558    CALL                            3
+        1566    POP_TOP
+        1568    LOAD_NAME                       35: worksheet_1
+        1570    LOAD_ATTR                       91 <INVALID>
+        1590    LOAD_CONST                      32: 1
+        1592    LOAD_CONST                      43: 5
+        1594    LOAD_NAME                       51: game_time_over
+        1596    CALL                            3
+        1604    POP_TOP
+        1606    LOAD_CONST                      0: 0
+        1608    STORE_NAME                      46: sec
+        1610    LOAD_CONST                      0: 0
+        1612    STORE_NAME                      57: close_count
+        1614    LOAD_CONST                      0: 0
+        1616    STORE_NAME                      58: far_count
+        1618    LOAD_CONST                      0: 0
+        1620    STORE_NAME                      59: object_energy_trig
+        1622    LOAD_CONST                      0: 0
+        1624    STORE_NAME                      60: energy_count
+        1626    LOAD_CONST                      0: 0
+        1628    STORE_NAME                      61: second_move
+        1630    LOAD_CONST                      0: 0
+        1632    STORE_NAME                      62: fourth_move
+        1634    LOAD_CONST                      0: 0
+        1636    STORE_NAME                      63: fifth_move
+        1638    LOAD_CONST                      0: 0
+        1640    STORE_NAME                      51: game_time_over
+        1642    NOP
+        1644    PUSH_NULL
+        1646    LOAD_NAME                       52: open
+        1648    LOAD_NAME                       31: files_to_read
+        1650    LOAD_CONST                      32: 1
+        1652    BINARY_SUBSCR
+        1656    LOAD_CONST                      33: 'r'
+        1658    CALL                            2
+        1666    BEFORE_WITH
+        1668    STORE_NAME                      53: log
+        1670    LOAD_NAME                       53: log
+        1672    GET_ITER
+        1674    FOR_ITER                        86 (to 1848)
+        1678    STORE_NAME                      54: line
+        1680    LOAD_NAME                       54: line
+        1682    LOAD_CONST                      34: 'SEC\n'
+        1684    COMPARE_OP                      40 (==)
+        1688    POP_JUMP_IF_FALSE               6 (to 1702)
+        1690    LOAD_NAME                       46: sec
+        1692    LOAD_CONST                      32: 1
+        1694    BINARY_OP                       13 (+=)
+        1698    STORE_NAME                      46: sec
+        1700    JUMP_BACKWARD                   14 (to 1674)
+        1702    LOAD_NAME                       54: line
+        1704    LOAD_CONST                      44: 'CLOSE\n'
+        1706    COMPARE_OP                      40 (==)
+        1710    POP_JUMP_IF_FALSE               6 (to 1724)
+        1712    LOAD_NAME                       57: close_count
+        1714    LOAD_CONST                      32: 1
+        1716    BINARY_OP                       13 (+=)
+        1720    STORE_NAME                      57: close_count
+        1722    JUMP_BACKWARD                   25 (to 1674)
+        1724    LOAD_NAME                       54: line
+        1726    LOAD_CONST                      45: 'FAR\n'
+        1728    COMPARE_OP                      40 (==)
+        1732    POP_JUMP_IF_FALSE               6 (to 1746)
+        1734    LOAD_NAME                       58: far_count
+        1736    LOAD_CONST                      32: 1
+        1738    BINARY_OP                       13 (+=)
+        1742    STORE_NAME                      58: far_count
+        1744    JUMP_BACKWARD                   36 (to 1674)
+        1746    LOAD_NAME                       54: line
+        1748    LOAD_CONST                      46: 'Object energy triggered\n'
+        1750    COMPARE_OP                      40 (==)
+        1754    POP_JUMP_IF_FALSE               3 (to 1762)
+        1756    LOAD_NAME                       46: sec
+        1758    STORE_NAME                      59: object_energy_trig
+        1760    JUMP_BACKWARD                   44 (to 1674)
+        1762    LOAD_NAME                       54: line
+        1764    LOAD_CONST                      47: 'Energy of ESCORT reduced\n'
+        1766    COMPARE_OP                      40 (==)
+        1770    POP_JUMP_IF_FALSE               6 (to 1784)
+        1772    LOAD_NAME                       60: energy_count
+        1774    LOAD_CONST                      32: 1
+        1776    BINARY_OP                       13 (+=)
+        1780    STORE_NAME                      60: energy_count
+        1782    JUMP_BACKWARD                   55 (to 1674)
+        1784    LOAD_NAME                       54: line
+        1786    LOAD_CONST                      48: 'Move 2\n'
+        1788    COMPARE_OP                      40 (==)
+        1792    POP_JUMP_IF_FALSE               3 (to 1800)
+        1794    LOAD_NAME                       46: sec
+        1796    STORE_NAME                      61: second_move
+        1798    JUMP_BACKWARD                   63 (to 1674)
+        1800    LOAD_NAME                       54: line
+        1802    LOAD_CONST                      49: 'Move 4\n'
+        1804    COMPARE_OP                      40 (==)
+        1808    POP_JUMP_IF_FALSE               3 (to 1816)
+        1810    LOAD_NAME                       46: sec
+        1812    STORE_NAME                      62: fourth_move
+        1814    JUMP_BACKWARD                   71 (to 1674)
+        1816    LOAD_NAME                       54: line
+        1818    LOAD_CONST                      50: 'Move 5\n'
+        1820    COMPARE_OP                      40 (==)
+        1824    POP_JUMP_IF_FALSE               3 (to 1832)
+        1826    LOAD_NAME                       46: sec
+        1828    STORE_NAME                      63: fifth_move
+        1830    JUMP_BACKWARD                   79 (to 1674)
+        1832    LOAD_NAME                       54: line
+        1834    LOAD_CONST                      39: 'Game time over\n'
+        1836    COMPARE_OP                      40 (==)
+        1840    POP_JUMP_IF_TRUE                1 (to 1844)
+        1842    JUMP_BACKWARD                   85 (to 1674)
+        1844    LOAD_CONST                      32: 1
+        1846    STORE_NAME                      51: game_time_over
+        1848    JUMP_BACKWARD                   88 (to 1674)
+        1850    END_FOR
+        1852    NOP
+        1854    LOAD_CONST                      1: None
+        1856    LOAD_CONST                      1: None
+        1858    LOAD_CONST                      1: None
+        1860    CALL                            2
+        1868    POP_TOP
+        1870    LOAD_NAME                       59: object_energy_trig
+        1872    STORE_NAME                      55: t1
+        1874    LOAD_NAME                       61: second_move
+        1876    LOAD_NAME                       59: object_energy_trig
+        1878    BINARY_OP                       10 (-)
+        1882    STORE_NAME                      56: t2
+        1884    LOAD_NAME                       62: fourth_move
+        1886    LOAD_NAME                       61: second_move
+        1888    BINARY_OP                       10 (-)
+        1892    STORE_NAME                      64: t3
+        1894    LOAD_NAME                       63: fifth_move
+        1896    LOAD_NAME                       62: fourth_move
+        1898    BINARY_OP                       10 (-)
+        1902    STORE_NAME                      65: t4
+        1904    LOAD_NAME                       36: worksheet_2
+        1906    LOAD_ATTR                       91 <INVALID>
+        1926    LOAD_CONST                      32: 1
+        1928    LOAD_CONST                      0: 0
+        1930    LOAD_NAME                       57: close_count
+        1932    LOAD_CONST                      43: 5
+        1934    BINARY_OP                       5 (*)
+        1938    CALL                            3
+        1946    POP_TOP
+        1948    LOAD_NAME                       36: worksheet_2
+        1950    LOAD_ATTR                       91 <INVALID>
+        1970    LOAD_CONST                      32: 1
+        1972    LOAD_CONST                      32: 1
+        1974    LOAD_NAME                       58: far_count
+        1976    LOAD_CONST                      43: 5
+        1978    BINARY_OP                       5 (*)
+        1982    CALL                            3
+        1990    POP_TOP
+        1992    LOAD_NAME                       36: worksheet_2
+        1994    LOAD_ATTR                       91 <INVALID>
+        2014    LOAD_CONST                      32: 1
+        2016    LOAD_CONST                      40: 2
+        2018    LOAD_NAME                       60: energy_count
+        2020    LOAD_CONST                      51: 10
+        2022    BINARY_OP                       5 (*)
+        2026    CALL                            3
+        2034    POP_TOP
+        2036    LOAD_NAME                       36: worksheet_2
+        2038    LOAD_ATTR                       91 <INVALID>
+        2058    LOAD_CONST                      32: 1
+        2060    LOAD_CONST                      41: 3
+        2062    LOAD_NAME                       55: t1
+        2064    CALL                            3
+        2072    POP_TOP
+        2074    LOAD_NAME                       36: worksheet_2
+        2076    LOAD_ATTR                       91 <INVALID>
+        2096    LOAD_CONST                      32: 1
+        2098    LOAD_CONST                      42: 4
+        2100    LOAD_NAME                       56: t2
+        2102    CALL                            3
+        2110    POP_TOP
+        2112    LOAD_NAME                       36: worksheet_2
+        2114    LOAD_ATTR                       91 <INVALID>
+        2134    LOAD_CONST                      32: 1
+        2136    LOAD_CONST                      43: 5
+        2138    LOAD_NAME                       64: t3
+        2140    CALL                            3
+        2148    POP_TOP
+        2150    LOAD_NAME                       36: worksheet_2
+        2152    LOAD_ATTR                       91 <INVALID>
+        2172    LOAD_CONST                      32: 1
+        2174    LOAD_CONST                      52: 6
+        2176    LOAD_NAME                       65: t4
+        2178    CALL                            3
+        2186    POP_TOP
+        2188    LOAD_NAME                       36: worksheet_2
+        2190    LOAD_ATTR                       91 <INVALID>
+        2210    LOAD_CONST                      32: 1
+        2212    LOAD_CONST                      53: 7
+        2214    LOAD_NAME                       46: sec
+        2216    CALL                            3
+        2224    POP_TOP
+        2226    LOAD_NAME                       36: worksheet_2
+        2228    LOAD_ATTR                       91 <INVALID>
+        2248    LOAD_CONST                      32: 1
+        2250    LOAD_CONST                      54: 8
+        2252    LOAD_NAME                       51: game_time_over
+        2254    CALL                            3
+        2262    POP_TOP
+        2264    LOAD_CONST                      0: 0
+        2266    STORE_NAME                      46: sec
+        2268    LOAD_CONST                      0: 0
+        2270    STORE_NAME                      48: player_dead
+        2272    LOAD_CONST                      0: 0
+        2274    STORE_NAME                      49: station_destroyed
+        2276    LOAD_CONST                      0: 0
+        2278    STORE_NAME                      47: dock_in
+        2280    LOAD_CONST                      0: 0
+        2282    STORE_NAME                      66: outer_neb
+        2284    LOAD_CONST                      0: 0
+        2286    STORE_NAME                      67: inner_neb
+        2288    LOAD_CONST                      0: 0
+        2290    STORE_NAME                      50: enemy_killed
+        2292    LOAD_CONST                      0: 0
+        2294    STORE_NAME                      51: game_time_over
+        2296    NOP
+        2298    PUSH_NULL
+        2300    LOAD_NAME                       52: open
+        2302    LOAD_NAME                       31: files_to_read
+        2304    LOAD_CONST                      40: 2
+        2306    BINARY_SUBSCR
+        2310    LOAD_CONST                      33: 'r'
+        2312    CALL                            2
+        2320    BEFORE_WITH
+        2322    STORE_NAME                      53: log
+        2324    LOAD_NAME                       53: log
+        2326    GET_ITER
+        2328    FOR_ITER                        67 (to 2464)
+        2332    STORE_NAME                      54: line
+        2334    LOAD_NAME                       54: line
+        2336    LOAD_CONST                      34: 'SEC\n'
+        2338    COMPARE_OP                      40 (==)
+        2342    POP_JUMP_IF_FALSE               6 (to 2356)
+        2344    LOAD_NAME                       46: sec
+        2346    LOAD_CONST                      32: 1
+        2348    BINARY_OP                       13 (+=)
+        2352    STORE_NAME                      46: sec
+        2354    JUMP_BACKWARD                   14 (to 2328)
+        2356    LOAD_NAME                       54: line
+        2358    LOAD_CONST                      36: 'Player Dead\n'
+        2360    COMPARE_OP                      40 (==)
+        2364    POP_JUMP_IF_FALSE               6 (to 2378)
+        2366    LOAD_NAME                       48: player_dead
+        2368    LOAD_CONST                      32: 1
+        2370    BINARY_OP                       13 (+=)
+        2374    STORE_NAME                      48: player_dead
+        2376    JUMP_BACKWARD                   25 (to 2328)
+        2378    LOAD_NAME                       54: line
+        2380    LOAD_CONST                      37: 'Station destroyed\n'
+        2382    COMPARE_OP                      40 (==)
+        2386    POP_JUMP_IF_FALSE               6 (to 2400)
+        2388    LOAD_NAME                       49: station_destroyed
+        2390    LOAD_CONST                      32: 1
+        2392    BINARY_OP                       13 (+=)
+        2396    STORE_NAME                      49: station_destroyed
+        2398    JUMP_BACKWARD                   36 (to 2328)
+        2400    LOAD_NAME                       54: line
+        2402    LOAD_CONST                      35: 'Dock in\n'
+        2404    COMPARE_OP                      40 (==)
+        2408    POP_JUMP_IF_FALSE               3 (to 2416)
+        2410    LOAD_NAME                       46: sec
+        2412    STORE_NAME                      47: dock_in
+        2414    JUMP_BACKWARD                   44 (to 2328)
+        2416    LOAD_NAME                       54: line
+        2418    LOAD_CONST                      55: 'T1\n'
+        2420    COMPARE_OP                      40 (==)
+        2424    POP_JUMP_IF_FALSE               3 (to 2432)
+        2426    LOAD_NAME                       46: sec
+        2428    STORE_NAME                      66: outer_neb
+        2430    JUMP_BACKWARD                   52 (to 2328)
+        2432    LOAD_NAME                       54: line
+        2434    LOAD_CONST                      56: 'T2\n'
+        2436    COMPARE_OP                      40 (==)
+        2440    POP_JUMP_IF_FALSE               3 (to 2448)
+        2442    LOAD_NAME                       46: sec
+        2444    STORE_NAME                      67: inner_neb
+        2446    JUMP_BACKWARD                   60 (to 2328)
+        2448    LOAD_NAME                       54: line
+        2450    LOAD_CONST                      39: 'Game time over\n'
+        2452    COMPARE_OP                      40 (==)
+        2456    POP_JUMP_IF_TRUE                1 (to 2460)
+        2458    JUMP_BACKWARD                   66 (to 2328)
+        2460    LOAD_CONST                      32: 1
+        2462    STORE_NAME                      51: game_time_over
+        2464    JUMP_BACKWARD                   69 (to 2328)
+        2466    END_FOR
+        2468    NOP
+        2470    LOAD_CONST                      1: None
+        2472    LOAD_CONST                      1: None
+        2474    LOAD_CONST                      1: None
+        2476    CALL                            2
+        2484    POP_TOP
+        2486    LOAD_NAME                       47: dock_in
+        2488    STORE_NAME                      55: t1
+        2490    LOAD_NAME                       66: outer_neb
+        2492    LOAD_NAME                       47: dock_in
+        2494    BINARY_OP                       10 (-)
+        2498    STORE_NAME                      56: t2
+        2500    LOAD_NAME                       67: inner_neb
+        2502    LOAD_NAME                       66: outer_neb
+        2504    BINARY_OP                       10 (-)
+        2508    STORE_NAME                      64: t3
+        2510    LOAD_NAME                       46: sec
+        2512    LOAD_NAME                       67: inner_neb
+        2514    BINARY_OP                       10 (-)
+        2518    STORE_NAME                      65: t4
+        2520    LOAD_NAME                       37: worksheet_3
+        2522    LOAD_ATTR                       91 <INVALID>
+        2542    LOAD_CONST                      32: 1
+        2544    LOAD_CONST                      0: 0
+        2546    LOAD_NAME                       48: player_dead
+        2548    CALL                            3
+        2556    POP_TOP
+        2558    LOAD_NAME                       37: worksheet_3
+        2560    LOAD_ATTR                       91 <INVALID>
+        2580    LOAD_CONST                      32: 1
+        2582    LOAD_CONST                      32: 1
+        2584    LOAD_NAME                       49: station_destroyed
+        2586    CALL                            3
+        2594    POP_TOP
+        2596    LOAD_NAME                       37: worksheet_3
+        2598    LOAD_ATTR                       91 <INVALID>
+        2618    LOAD_CONST                      32: 1
+        2620    LOAD_CONST                      40: 2
+        2622    LOAD_NAME                       55: t1
+        2624    CALL                            3
+        2632    POP_TOP
+        2634    LOAD_NAME                       37: worksheet_3
+        2636    LOAD_ATTR                       91 <INVALID>
+        2656    LOAD_CONST                      32: 1
+        2658    LOAD_CONST                      41: 3
+        2660    LOAD_NAME                       56: t2
+        2662    CALL                            3
+        2670    POP_TOP
+        2672    LOAD_NAME                       37: worksheet_3
+        2674    LOAD_ATTR                       91 <INVALID>
+        2694    LOAD_CONST                      32: 1
+        2696    LOAD_CONST                      42: 4
+        2698    LOAD_NAME                       64: t3
+        2700    CALL                            3
+        2708    POP_TOP
+        2710    LOAD_NAME                       37: worksheet_3
+        2712    LOAD_ATTR                       91 <INVALID>
+        2732    LOAD_CONST                      32: 1
+        2734    LOAD_CONST                      43: 5
+        2736    LOAD_NAME                       65: t4
+        2738    CALL                            3
+        2746    POP_TOP
+        2748    LOAD_NAME                       37: worksheet_3
+        2750    LOAD_ATTR                       91 <INVALID>
+        2770    LOAD_CONST                      32: 1
+        2772    LOAD_CONST                      52: 6
+        2774    LOAD_NAME                       46: sec
+        2776    CALL                            3
+        2784    POP_TOP
+        2786    LOAD_NAME                       37: worksheet_3
+        2788    LOAD_ATTR                       91 <INVALID>
+        2808    LOAD_CONST                      32: 1
+        2810    LOAD_CONST                      53: 7
+        2812    LOAD_NAME                       51: game_time_over
+        2814    CALL                            3
+        2822    POP_TOP
+        2824    LOAD_NAME                       33: workbook
+        2826    LOAD_ATTR                       137 <INVALID>
+        2846    CALL                            0
+        2854    POP_TOP
+        2856    LOAD_NAME                       26: application_path
+        2858    LOAD_CONST                      57: '\\'
+        2860    BINARY_OP                       0 (+)
+        2864    LOAD_NAME                       30: ID
+        2866    BINARY_OP                       0 (+)
+        2870    LOAD_CONST                      58: '.zip'
+        2872    BINARY_OP                       0 (+)
+        2876    STORE_NAME                      69: zip_file_path
+        2878    LOAD_NAME                       26: application_path
+        2880    LOAD_CONST                      16: '\\MISS_Stage1_LOG.txt'
+        2882    BINARY_OP                       0 (+)
+        2886    LOAD_NAME                       26: application_path
+        2888    LOAD_CONST                      17: '\\MISS_Stage2_LOG.txt'
+        2890    BINARY_OP                       0 (+)
+        2894    LOAD_NAME                       26: application_path
+        2896    LOAD_CONST                      18: '\\MISS_Stage3_LOG.txt'
+        2898    BINARY_OP                       0 (+)
+        2902    LOAD_NAME                       26: application_path
+        2904    LOAD_CONST                      59: '\\Performance_Metrics_'
+        2906    BINARY_OP                       0 (+)
+        2910    LOAD_NAME                       30: ID
+        2912    BINARY_OP                       0 (+)
+        2916    LOAD_CONST                      20: '.xlsx'
+        2918    BINARY_OP                       0 (+)
+        2922    BUILD_LIST                      4
+        2924    STORE_NAME                      70: files_to_zip
+        2926    PUSH_NULL
+        2928    LOAD_NAME                       5: zipfile
+        2930    LOAD_ATTR                       142 <INVALID>
+        2950    LOAD_NAME                       69: zip_file_path
+        2952    LOAD_CONST                      60: 'w'
+        2954    CALL                            2
+        2962    BEFORE_WITH
+        2964    STORE_NAME                      72: zipf
+        2966    LOAD_NAME                       70: files_to_zip
+        2968    GET_ITER
+        2970    FOR_ITER                        58 (to 3088)
+        2974    STORE_NAME                      73: file
+        2976    NOP
+        2978    LOAD_NAME                       72: zipf
+        2980    LOAD_ATTR                       91 <INVALID>
+        3000    LOAD_NAME                       73: file
+        3002    LOAD_NAME                       73: file
+        3004    LOAD_ATTR                       149 <INVALID>
+        3024    LOAD_CONST                      57: '\\'
+        3026    CALL                            1
+        3034    LOAD_CONST                      61: -1
+        3036    BINARY_SUBSCR
+        3040    KW_NAMES                        62: ('arcname',)
+        3042    CALL                            2
+        3050    POP_TOP
+        3052    PUSH_NULL
+        3054    LOAD_NAME                       1: os
+        3056    LOAD_ATTR                       150 <INVALID>
+        3076    LOAD_NAME                       73: file
+        3078    CALL                            1
+        3086    POP_TOP
+        3088    JUMP_BACKWARD                   60 (to 2970)
+        3090    END_FOR
+        3092    NOP
+        3094    LOAD_CONST                      1: None
+        3096    LOAD_CONST                      1: None
+        3098    LOAD_CONST                      1: None
+        3100    CALL                            2
+        3108    POP_TOP
+        3110    RETURN_CONST                    1: None
+        3112    PUSH_EXC_INFO
+        3114    POP_TOP
+        3116    PUSH_NULL
+        3118    LOAD_NAME                       7: pag
+        3120    LOAD_ATTR                       58: far_count
+        3140    LOAD_CONST                      9: 'ERROR while importing LOG for Mission 1!\n'
+        3142    CALL                            1
+        3150    POP_TOP
+        3152    POP_EXCEPT
+        3154    JUMP_BACKWARD                   1274 (to 610)
+        3158    COPY                            3
+        3160    POP_EXCEPT
+        3162    RERAISE                         1
+        3164    PUSH_EXC_INFO
+        3166    POP_TOP
+        3168    PUSH_NULL
+        3170    LOAD_NAME                       7: pag
+        3172    LOAD_ATTR                       58: far_count
+        3192    LOAD_CONST                      11: 'ERROR while importing LOG for Mission 2!\n'
+        3194    CALL                            1
+        3202    POP_TOP
+        3204    POP_EXCEPT
+        3206    JUMP_BACKWARD                   1280 (to 650)
+        3210    COPY                            3
+        3212    POP_EXCEPT
+        3214    RERAISE                         1
+        3216    PUSH_EXC_INFO
+        3218    POP_TOP
+        3220    PUSH_NULL
+        3222    LOAD_NAME                       7: pag
+        3224    LOAD_ATTR                       58: far_count
+        3244    LOAD_CONST                      13: 'ERROR while importing LOG for Mission 3!\n'
+        3246    CALL                            1
+        3254    POP_TOP
+        3256    POP_EXCEPT
+        3258    JUMP_BACKWARD                   1286 (to 690)
+        3262    COPY                            3
+        3264    POP_EXCEPT
+        3266    RERAISE                         1
+        3268    PUSH_EXC_INFO
+        3270    WITH_EXCEPT_START
+        3272    POP_JUMP_IF_TRUE                1 (to 3276)
+        3274    RERAISE                         2
+        3276    POP_TOP
+        3278    POP_EXCEPT
+        3280    POP_TOP
+        3282    POP_TOP
+        3284    JUMP_BACKWARD                   962 (to 1364)
+        3288    COPY                            3
+        3290    POP_EXCEPT
+        3292    RERAISE                         1
+        3294    PUSH_EXC_INFO
+        3296    POP_TOP
+        3298    POP_EXCEPT
+        3300    JUMP_BACKWARD                   970 (to 1364)
+        3304    COPY                            3
+        3306    POP_EXCEPT
+        3308    RERAISE                         1
+        3310    PUSH_EXC_INFO
+        3312    WITH_EXCEPT_START
+        3314    POP_JUMP_IF_TRUE                1 (to 3318)
+        3316    RERAISE                         2
+        3318    POP_TOP
+        3320    POP_EXCEPT
+        3322    POP_TOP
+        3324    POP_TOP
+        3326    JUMP_BACKWARD                   730 (to 1870)
+        3330    COPY                            3
+        3332    POP_EXCEPT
+        3334    RERAISE                         1
+        3336    PUSH_EXC_INFO
+        3338    POP_TOP
+        3340    POP_EXCEPT
+        3342    JUMP_BACKWARD                   738 (to 1870)
+        3346    COPY                            3
+        3348    POP_EXCEPT
+        3350    RERAISE                         1
+        3352    PUSH_EXC_INFO
+        3354    WITH_EXCEPT_START
+        3356    POP_JUMP_IF_TRUE                1 (to 3360)
+        3358    RERAISE                         2
+        3360    POP_TOP
+        3362    POP_EXCEPT
+        3364    POP_TOP
+        3366    POP_TOP
+        3368    JUMP_BACKWARD                   443 (to 2486)
+        3372    COPY                            3
+        3374    POP_EXCEPT
+        3376    RERAISE                         1
+        3378    PUSH_EXC_INFO
+        3380    POP_TOP
+        3382    POP_EXCEPT
+        3384    JUMP_BACKWARD                   451 (to 2486)
+        3388    COPY                            3
+        3390    POP_EXCEPT
+        3392    RERAISE                         1
+        3394    PUSH_EXC_INFO
+        3396    POP_TOP
+        3398    PUSH_NULL
+        3400    LOAD_NAME                       7: pag
+        3402    LOAD_ATTR                       58: far_count
+        3422    LOAD_CONST                      63: 'ERROR while zipping '
+        3424    LOAD_NAME                       73: file
+        3426    LOAD_ATTR                       149 <INVALID>
+        3446    LOAD_CONST                      57: '\\'
+        3448    CALL                            1
+        3456    LOAD_CONST                      61: -1
+        3458    BINARY_SUBSCR
+        3462    BINARY_OP                       0 (+)
+        3466    CALL                            1
+        3474    POP_TOP
+        3476    POP_EXCEPT
+        3478    JUMP_BACKWARD                   255 (to 2970)
+        3480    COPY                            3
+        3482    POP_EXCEPT
+        3484    RERAISE                         1
+        3486    PUSH_EXC_INFO
+        3488    WITH_EXCEPT_START
+        3490    POP_JUMP_IF_TRUE                1 (to 3494)
+        3492    RERAISE                         2
+        3494    POP_TOP
+        3496    POP_EXCEPT
+        3498    POP_TOP
+        3500    POP_TOP
+        3502    RETURN_CONST                    1: None
+        3504    COPY                            3
+        3506    POP_EXCEPT
+        3508    RERAISE                         1
