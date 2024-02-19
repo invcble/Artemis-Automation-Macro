@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to my Macro Development Project at LeBow College of Business. My goal is to leverage technological innovation to boost research efficiency. This project involves developing automation macros and compiler tools to streamline operations and reduce manual data processing by a significant margin. I am transitioning legacy scripts to Python for enhanced reliability and automation, aligning the project with departmental objectives.
+Welcome to my Macro Development Project at LeBow College of Business. My goal is to leverage advanced scripting languages to boost research efficiency. This project involves developing automation macros and compiler tools to streamline operations and reduce manual data processing by a significant margin. I am transitioning legacy scripts to Python for enhanced reliability and automation, aligning the project with departmental objectives.
 
 ## Project Components
 
