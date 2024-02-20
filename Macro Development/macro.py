@@ -3,9 +3,46 @@ import time
 import subprocess
 import webbrowser
 
+####FLOW
+#Server: Start Training
+#Clients: Opens Training.exe
+
+#Server: Start Recording
+#Clients: Closes Training.exe,
+########  Starts Kaltura
+
+#Server: Start Artemis M1
+#Clients: Opens Artemis & Loads Mission 1,
+##(( SERVER HAS CONTROL TO START ARTEMIS SERVER ))
+
+#Server: Start Survey 1
+#Clients: Closes Artemis,
+########  Open Survey 1
+
+#Server: Start Artemis M2
+#Clients: Closes browser,
+########  Opens Artemis & Loads Mission 2,
+##(( SERVER HAS CONTROL TO START ARTEMIS SERVER ))
+
+#Server: Start Survey 2
+#Clients: Closes Artemis,
+########  Open Survey 2
+
+#Server: Start Artemis M3
+#Clients: Closes browser,
+########  Opens Artemis & Loads Mission 3,
+##(( SERVER HAS CONTROL TO START ARTEMIS SERVER ))
+
+#Server: Start Survey 3
+#Clients: Closes Artemis,
+########  Open Survey 3
+
+#Server: Stop Recording
+#Clients: Closes browser,
+########  Stops Kaltura
+
 time.sleep(2)
 training = subprocess.Popen("C:\Program Files\Windows Classics\mspaint.exe") #replace training.exe
-
 time.sleep(2)
 
 while True:
@@ -15,10 +52,11 @@ while True:
     else:
         print("Starting next sequence")
         break
+time.sleep(2)
 
 #PLACEHOLDER OPEN GUD
 #PLACEHOLDER OPEN File_org
-time.sleep(2)
+
 
 #KALTURA START
 pag.write(['win'])
@@ -59,7 +97,8 @@ pag.click(1537.342) #Modeswitch
 time.sleep(1)
 pag.click(1537,394) #Layoutswitch
 time.sleep(1)
-pag.click(1791,1105) #Startgame
+#WAIT FOR MANUAL START
+# pag.click(1791,1105) #Startgame
 
 #CLIENT ARTEMIS - Helm
 pag.write(['win'])
