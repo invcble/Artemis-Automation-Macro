@@ -1,4 +1,4 @@
-# Macro Development Project for Psychology Research Study
+# Macro Project for Psychology Research Study
 
 ## Introduction
 
