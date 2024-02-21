@@ -18,12 +18,12 @@ The project is divided into four key components, each targeting a specific area 
 ### RPC Macro
 
 - **Purpose**: Enables communication between the experimenter's and participant's PCs to invoke other macros.
-- **Status**: On hold. Basic functionality implemented but requires updates for specific commands.
+- **Status**: Ongoing. Basic functionality implemented but requires updates for specific commands.
 
 ### Automation Macro
 
 - **Purpose**: Automates the opening, closing, and configuration of various tools for the research process.
-- **Status**: On hold. Halfway through development; needs integration of direct readings from the participant's computer.
+- **Status**: Ongoing. Halfway through development; needs integration of direct readings from the participant's computer.
 
 ### Performance Metric Macro
 
