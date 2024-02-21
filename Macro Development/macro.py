@@ -1,52 +1,10 @@
 import pyautogui as pag
+import pygetwindow as gw
+import os
 import time
 import subprocess
 import webbrowser
-import os
-import pygetwindow as gw
 
-
-####FLOW
-#Server: Start Training
-#Clients: Opens Training.exe
-
-#Server: Start Recording
-#Clients: Closes Training.exe,
-########  Starts Kaltura, minimize
-
-#Server: Start Artemis M1
-#Clients: Opens Artemis & Loads Mission 1,
-##(( SERVER HAS CONTROL TO START ARTEMIS SERVER ))
-
-#Server: Start Survey 1
-#Clients: Closes Artemis,
-########  Open Survey 1
-
-#Server: Start Artemis M2
-#Clients: Closes browser,
-########  Opens Artemis & Loads Mission 2,
-##(( SERVER HAS CONTROL TO START ARTEMIS SERVER ))
-
-#Server: Start Survey 2
-#Clients: Closes Artemis,
-########  Open Survey 2
-
-#Server: Start Artemis M3
-#Clients: Closes browser,
-########  Opens Artemis & Loads Mission 3,
-##(( SERVER HAS CONTROL TO START ARTEMIS SERVER ))
-
-#Server: Start Survey 3
-#Clients: Closes Artemis,
-########  Open Survey 3
-
-#Server: Stop Recording
-#Clients: Closes browser,
-########  Stops Kaltura
-
-
-## AT VERY END, Rename POPUP saves ID, writes log file with that ID,
-## send that ID to participants, participants create a folder with name, MOVES current video files
 
 # time.sleep(2)
 # training = subprocess.Popen("C:\Program Files\Windows Classics\mspaint.exe") #replace training.exe
@@ -64,10 +22,10 @@ import pygetwindow as gw
 #PLACEHOLDER OPEN GUD
 #PLACEHOLDER OPEN File_org
 
-time.sleep(4)
 #KALTURA START
-os.system("taskkill /im KalturaCapture.exe /f")
 time.sleep(2)
+os.system("taskkill /im KalturaCapture.exe /f")
+time.sleep(3)
 pag.write(['win'])
 time.sleep(1)
 pag.write("Kaltura Capture")
@@ -188,23 +146,6 @@ pag.mouseUp()
 # # time.sleep(10)
 # # # pag.moveRel(100,100,5)
 # # # print(pag.position())
-
-# #KALTURA STOP
-# pag.moveTo(pag.locateCenterOnScreen("pause.png", confidence=0.8))
-# pag.moveRel(-100,0)
-# pag.mouseDown()
-# time.sleep(1)
-# pag.mouseUp()
-# time.sleep(1)
-# pag.leftClick()
-# time.sleep(2)
-# pag.click(pag.locateCenterOnScreen("confirm.png", confidence=0.8))
-# time.sleep(2)
-# pag.click(pag.locateCenterOnScreen("save_button.png", confidence=0.8))
-# time.sleep(2)
-# pag.click(pag.locateCenterOnScreen("close_kaltura.png", confidence=0.9))
-# time.sleep(1)
-# pag.click(pag.locateCenterOnScreen("close_kaltura.png", confidence=0.9))
 
 
 # #PLACEHOLDER CLOSE GUD

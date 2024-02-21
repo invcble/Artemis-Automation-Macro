@@ -1,7 +1,8 @@
 from xmlrpc.server import SimpleXMLRPCServer
 import time
 
-server = SimpleXMLRPCServer(('10.250.8.83', 4000))
+# server = SimpleXMLRPCServer(('10.250.8.83', 4000))
+server = SimpleXMLRPCServer(('localhost', 4000))
 server.register_introspection_functions()
 text = "hello"
 
