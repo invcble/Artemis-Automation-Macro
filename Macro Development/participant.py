@@ -1,7 +1,7 @@
 from xmlrpc.server import SimpleXMLRPCServer
 import time
 
-# server = SimpleXMLRPCServer(('10.250.8.83', 4000))
+# party = SimpleXMLRPCServer(('10.250.8.83', 4000))
 party = SimpleXMLRPCServer(('localhost', 4000), allow_none=True)
 party.register_introspection_functions()
 
@@ -11,8 +11,8 @@ def actionOne():
 def actionTwo():
     print("HELLO, doing action Two")
 
-def idShare(x):
-    print("Printing ID on server: "+x)
+def idShare(ID):
+    print("Printing ID on server: "+ ID)
 
 party.register_function(idShare)
 party.register_function(actionOne)

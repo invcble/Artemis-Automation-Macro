@@ -11,31 +11,28 @@
 ##(( SERVER HAS CONTROL TO START ARTEMIS SERVER ))
 
 #Server: Start Survey 1
-#Clients: Closes Artemis,
-########  Open Survey 1
+#Clients: Open Survey 1
 
 #Server: Start Artemis M2
 #Clients: Closes browser,
-########  Opens Artemis & Loads Mission 2,
+########  Loads Mission 2,
 ##(( SERVER HAS CONTROL TO START ARTEMIS SERVER ))
 
 #Server: Start Survey 2
-#Clients: Closes Artemis,
-########  Open Survey 2
+#Clients: Open Survey 2
 
 #Server: Start Artemis M3
 #Clients: Closes browser,
-########  Opens Artemis & Loads Mission 3,
+########  Loads Mission 3,
 ##(( SERVER HAS CONTROL TO START ARTEMIS SERVER ))
 
 #Server: Start Survey 3
-#Clients: Closes Artemis,
-########  Open Survey 3
+#Clients: Open Survey 3
 
 #Server: Stop Recording
 #Clients: Closes browser,
+########  Closes Artemis,
 ########  Stops Kaltura
-
 
 ## AT VERY END, Rename POPUP saves ID, writes log file with that ID,
 ## send that ID to participants, participants create a folder with name, MOVES current video files
