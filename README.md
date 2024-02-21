@@ -1,4 +1,4 @@
-# Macro Development Project for Enhanced Research Efficiency
+# Macro Development Project for Psychology Research Study
 
 ## Introduction
 
