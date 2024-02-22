@@ -21,6 +21,7 @@
 ##(( Experimenter HAS CONTROL TO START ARTEMIS Experimenter ))
 
 #Experimenter: Start Survey 2
+#Experimenter: Take Screenshot
 #Participants: Open Survey 2
 
 #Experimenter: Start M3
@@ -29,6 +30,7 @@
 ##(( Experimenter HAS CONTROL TO START ARTEMIS Experimenter ))
 
 #Experimenter: Start Survey 3
+#Experimenter: Take Screenshot
 #Participants: Open Survey 3
 
 #Experimenter: Stop Recording
@@ -38,3 +40,5 @@
 
 ## AT VERY END, Rename POPUP saves ID, writes log file with that ID,
 ## send that ID to participants, participants create a folder with name, MOVES current video files
+Training.exe
+Screenshot location
