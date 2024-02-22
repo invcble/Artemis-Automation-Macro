@@ -1,15 +1,18 @@
 from xmlrpc.server import SimpleXMLRPCServer
 import time
+import subprocess
 
 # party = SimpleXMLRPCServer(('10.250.8.83', 4000))
 party = SimpleXMLRPCServer(('localhost', 4000), allow_none=True)
 party.register_introspection_functions()
 
-def actionOne():
-    print("HELLO, doing action One")
+def start_training():
+    subprocess.run(['python', 'Macro Development/participant/test2.py'])
 
 def actionTwo():
-    print("HELLO, doing action Two")
+    print("HELLO, running test2.py")
+    time.sleep(2)
+    subprocess.run(['python', '\\Macro Development\\test2.py'])
 
 def idShare(ID):
     print("Printing ID on server: "+ ID)

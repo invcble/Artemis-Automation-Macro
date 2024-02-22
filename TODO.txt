@@ -42,3 +42,4 @@
 ## send that ID to participants, participants create a folder with name, MOVES current video files
 Training.exe
 Screenshot location
+Chck if autofocus after survey
