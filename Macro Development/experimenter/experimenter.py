@@ -2,8 +2,8 @@ import xmlrpc.client
 import time
 import subprocess
 
-# party = xmlrpc.client.ServerProxy('http://10.250.8.83:4000')
-party = xmlrpc.client.ServerProxy('http://localhost:4000')
+party = xmlrpc.client.ServerProxy('http://10.250.114.28:4000')
+# party = xmlrpc.client.ServerProxy('http://localhost:4000')
 
 #  Start Training:   1
 #  Start Recording:  2
@@ -26,26 +26,26 @@ try:
         elif answer == '2':
             party.start_recording()
         elif answer == '3':
+            subprocess.run(['python', 'Start_Artemis_M1_E.py'])
             party.start_artemis_m1()
-            subprocess.run(['python', 'Macro Development\\experimenter\\Start_Artemis_M1_E.py'])
         elif answer == '4':
             party.start_survey1()
-            subprocess.run(['python', 'Macro Development\\experimenter\\Take_Screenshot1_E.py'])
+            subprocess.run(['python', 'Take_Screenshot1_E.py'])
         elif answer == '5':
             party.start_m2()
-            subprocess.run(['python', 'Macro Development\\experimenter\\Start_M2_E.py'])
+            subprocess.run(['python', 'Start_M2_E.py'])
         elif answer == '6':
             party.start_survey2()
-            subprocess.run(['python', 'Macro Development\\experimenter\\Take_Screenshot2_E.py'])
+            subprocess.run(['python', 'Take_Screenshot2_E.py'])
         elif answer == '7':
             party.start_m3()
-            subprocess.run(['python', 'Macro Development\\experimenter\\Start_M3_E.py'])
+            subprocess.run(['python', 'Start_M3_E.py'])
         elif answer == '8':
             party.start_survey3()
-            subprocess.run(['python', 'Macro Development\\experimenter\\Take_Screenshot3_E.py'])
+            subprocess.run(['python', 'Take_Screenshot3_E.py'])
         elif answer == '9':
             party.stop_recording()
-            subprocess.run(['python', 'Macro Development\\experimenter\\Stop_Recording_E.py'])
+            subprocess.run(['python', 'Stop_Recording_E.py'])
         elif answer == '0':
             ID = input("Give ID: ")
             party.idShare(ID)

@@ -4,7 +4,10 @@ import pygetwindow as gw
 import pyautogui as pag
 
 time.sleep(1)
-os.system("taskkill /im chrome.exe /f")
+pag.moveTo(383,28) #Closechrome
+pag.mouseUp()
+pag.mouseDown()
+pag.mouseUp()
 time.sleep(2)
 os.system("taskkill /im Artemis.exe /f")
 time.sleep(2)

@@ -1,6 +1,9 @@
-import os
+import pyautogui as pag
 import time
 
 time.sleep(1)
-os.system("taskkill /im chrome.exe /f")
+pag.moveTo(383,28) #Closechrome
+pag.mouseUp()
+pag.mouseDown()
+pag.mouseUp()
 time.sleep(1)

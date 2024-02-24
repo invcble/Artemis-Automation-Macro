@@ -2,11 +2,13 @@ import pyautogui as pag
 import os
 import time
 
-time.sleep(1)
-#replace Training.exe
-os.system("taskkill /im Training.exe /f")
+# time.sleep(1)
+# pag.moveTo(1438,236) #Stoptraining
+# pag.mouseDown()
+# pag.mouseUp()
 
-time.sleep(3)
+
+time.sleep(1)
 os.system("taskkill /im KalturaCapture.exe /f") #Killkaltura
 time.sleep(3)
 pag.write(['win'])
