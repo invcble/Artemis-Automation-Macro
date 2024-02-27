@@ -16,6 +16,7 @@ from multiprocessing import Process
 Helm = xmlrpc.client.ServerProxy('http://10.250.114.28:4001')
 Wpns = xmlrpc.client.ServerProxy('http://10.250.114.28:4002')
 Engr = xmlrpc.client.ServerProxy('http://10.250.114.28:4003')
+print("hi")
 # party = xmlrpc.client.ServerProxy('http://localhost:4000')
 
 #  Start Training:   1
@@ -85,5 +86,7 @@ if __name__=='__main__':
         print("Stopped Loop")
     except ConnectionRefusedError:
         print("Server Closed")
+    except TimeoutError:
+        print("Connection ERROR")
 
 
