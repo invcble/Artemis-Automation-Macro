@@ -1,10 +1,10 @@
 from xmlrpc.server import SimpleXMLRPCServer
-import time
+import socket
 import subprocess
 
-party = SimpleXMLRPCServer(('10.250.114.28', 4000), allow_none=True)
+IP = socket.gethostbyname(socket.gethostname()) #auto grabbing IP
+party = SimpleXMLRPCServer((IP, 4001), allow_none=True)
 # party = SimpleXMLRPCServer(('localhost', 4000), allow_none=True)
-party.register_introspection_functions()
 
 def start_training():
     subprocess.run(['python', 'Start_Training_P.py'])

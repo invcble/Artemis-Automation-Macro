@@ -40,6 +40,8 @@
 
 ## AT VERY END, Rename POPUP saves ID, writes log file with that ID,
 ## send that ID to participants, participants create a folder with name, MOVES current video files
-Training.exe
-Screenshot location
-Chck if autofocus after survey
+
+
+Disable UAC
+Auto brightness
+Chrome tweak
