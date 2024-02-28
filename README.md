@@ -1,4 +1,4 @@
-# Macro Project for Psychology Research Study
+# Macro Project for Behavioural Research Study
 
 ## Introduction
 
