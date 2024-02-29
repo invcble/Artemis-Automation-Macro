@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
+import time
 
 coordinates = "300x400+100+100"
 
@@ -13,6 +14,7 @@ def submission():
         show_sub_window()
 
 def printing():
+    time.sleep(10)
     print( teamID )
 
 def show_sub_window():
