@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 import time
 
-coordinates = "300x400+100+100"
+coordinates = "300x300+400+400"
 
 def submission():
     global teamID
@@ -36,19 +36,19 @@ def show_sub_window():
     button = tk.Button(buttonframe, text="2. Start Recording", width=15, command=sub_window.destroy)
     button.grid(row=0, column=1, padx=5, pady=5)
 
-    button = tk.Button(buttonframe, text="3. Start M1", width=15, command=printing)
+    button = tk.Button(buttonframe, text="3. Start Mission 1", width=15, command=printing)
     button.grid(row=1, column=0, padx=5, pady=5)
 
     button = tk.Button(buttonframe, text="4. Start Survey 1", width=15, command=sub_window.destroy)
     button.grid(row=1, column=1, padx=5, pady=5)
 
-    button = tk.Button(buttonframe, text="5. Start M2", width=15, command=printing)
+    button = tk.Button(buttonframe, text="5. Start Mission 2", width=15, command=printing)
     button.grid(row=2, column=0, padx=5, pady=5)
 
     button = tk.Button(buttonframe, text="6. Start Survey 2", width=15, command=sub_window.destroy)
     button.grid(row=2, column=1, padx=5, pady=5)
 
-    button = tk.Button(buttonframe, text="7. Start M3", width=15, command=printing)
+    button = tk.Button(buttonframe, text="7. Start Mission 3", width=15, command=printing)
     button.grid(row=3, column=0, padx=5, pady=5)
 
     button = tk.Button(buttonframe, text="8. Start Survey 3", width=15, command=sub_window.destroy)
