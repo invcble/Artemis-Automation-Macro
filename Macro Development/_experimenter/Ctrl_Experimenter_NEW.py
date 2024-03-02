@@ -31,7 +31,7 @@ def submission():
     if len(type_field.get())==0 or type_field.get().isspace():
         messagebox.showinfo(title="Error", message="Please enter a Team ID")
     else:
-        teamID = type_field.get()
+        teamID = str( type_field.get() )
         panel.destroy()
         show_sub_window()
 
@@ -46,8 +46,8 @@ def checkConnection():
 
 def startTraining():
     Thread(target = Helm.start_training, args = (teamID,)).start()
-    # Thread(target = Wpns.start_training).start()
-    # Thread(target = Engr.start_training).start()
+    # Thread(target = Wpns.start_training, args = (teamID,)).start()
+    # Thread(target = Engr.start_training, args = (teamID,)).start()
 
 def startRecording():
     Thread(target = Helm.start_recording).start()
@@ -62,9 +62,9 @@ def startArtemisM1():
 
 def startSurvey1():
     Thread(target = Helm.start_survey1).start()
-    Thread(target = Wpns.start_survey1).start()
-    Thread(target = Engr.start_survey1).start()
-    subprocess.run(['python', 'Take_Screenshot1_E.py'])
+    # Thread(target = Wpns.start_survey1).start()
+    # Thread(target = Engr.start_survey1).start()
+    subprocess.run(['python', 'Take_Screenshot1_E.py', teamID])
 
 def startM2():
     Thread(target = Helm.start_m2).start()

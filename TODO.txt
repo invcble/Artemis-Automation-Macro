@@ -39,7 +39,7 @@
 -->>Participants: puts video in Recording/teamID/role folder
 
 
-
+new dir = C:\\ARTEMIS\\teamID
 Disable UAC
 exe execution defender warning
 Chrome tweak

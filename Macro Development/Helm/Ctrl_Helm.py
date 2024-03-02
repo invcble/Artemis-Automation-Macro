@@ -27,7 +27,7 @@ def start_artemis_m1():
     subprocess.run(['python', 'Start_Artemis_M1_P.py'])
 
 def start_survey1():
-    subprocess.run(['python', 'Start_Survey1_P.py'])
+    subprocess.run(['python', 'Start_Survey1_P.py', party_teamID])
 
 def start_m2():
     subprocess.run(['python', 'Start_M2_P.py'])
