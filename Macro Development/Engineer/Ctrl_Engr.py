@@ -6,6 +6,9 @@ IP = socket.gethostbyname(socket.gethostname()) #auto grabbing IP
 party = SimpleXMLRPCServer((IP, 4003), allow_none=True)
 # party = SimpleXMLRPCServer(('localhost', 4000), allow_none=True)
 
+def check():
+    pass
+
 def start_training():
     subprocess.run(['python', 'Start_Training_P.py'])
 
@@ -37,6 +40,7 @@ def idShare(ID):
     print("Printing ID on server: "+ ID)
 
 
+party.register_function(check)
 party.register_function(start_training)
 party.register_function(start_recording)
 party.register_function(start_artemis_m1)

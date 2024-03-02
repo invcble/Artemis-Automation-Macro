@@ -13,11 +13,14 @@ with open("IP_LIST.txt") as file:
     for line in file:
         IP_list.append( line.strip().split(": ")[1] )
 
-Helm = xmlrpc.client.ServerProxy('http://'+ IP_list[0] +':4001')
+Helm = xmlrpc.client.ServerProxy('http://localhost:4000')
+# Wpns = xmlrpc.client.ServerProxy('http://localhost:4000')
+# Engr = xmlrpc.client.ServerProxy('http://localhost:4000')
+# Helm = xmlrpc.client.ServerProxy('http://'+ IP_list[0] +':4001')
 Wpns = xmlrpc.client.ServerProxy('http://'+ IP_list[1] +':4002')
 Engr = xmlrpc.client.ServerProxy('http://'+ IP_list[2] +':4003')
 
-print("Console Starting...FIX ME if you see me again")
+print("Console Starting...")
 
 
 
@@ -31,6 +34,15 @@ def submission():
         teamID = type_field.get()
         panel.destroy()
         show_sub_window()
+
+def checkConnection():
+    try:
+        Helm.check()
+        Wpns.check()
+        Engr.check()
+        messagebox.showinfo(title="Connection OK", message="All are connected")
+    except:
+        messagebox.showerror(title="Connection Error", message="Please update IP_LIST.txt")
 
 def startTraining():
     Thread(target = Helm.start_training).start()
@@ -90,6 +102,7 @@ def stopRecording():
 ##-------------------TKINTER WINDOW-------------------##
 
 def show_sub_window():
+
     sub_window = tk.Tk()
     sub_window.title("Macro Center")
     sub_window.geometry(coordinates)
@@ -98,6 +111,9 @@ def show_sub_window():
     
     team_label = tk.Label(sub_window, text="Team ID: " + teamID)
     team_label.pack(pady=10)
+
+    check_button = tk.Button(sub_window, text="Check Connection", command=checkConnection)
+    check_button.pack(pady=3, padx=5)
 
     buttonframe = tk.Frame(sub_window)
     buttonframe.pack(padx=5, pady=5)
@@ -132,8 +148,8 @@ def show_sub_window():
     button = tk.Button(buttonframe, text="placeholder", width=15, command=sub_window.destroy)
     button.grid(row=4, column=1, padx=5, pady=5)
 
-    close_button = tk.Button(sub_window, text="EXIT", command=sub_window.destroy)
-    close_button.pack(pady=5, padx=5)
+    # close_button = tk.Button(sub_window, text="EXIT", command=sub_window.destroy)
+    # close_button.pack(pady=5, padx=5)
 
 
 
