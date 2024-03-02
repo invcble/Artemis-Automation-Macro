@@ -1,8 +1,27 @@
 import tkinter as tk
 from tkinter import messagebox
+import xmlrpc.client
 import time
+import subprocess
+from threading import Thread
+
 
 coordinates = "300x300+400+400"
+IP_list = []
+
+with open("IP_LIST.txt") as file:
+    for line in file:
+        IP_list.append( line.strip().split(": ")[1] )
+
+Helm = xmlrpc.client.ServerProxy('http://'+ IP_list[0] +':4001')
+Wpns = xmlrpc.client.ServerProxy('http://'+ IP_list[1] +':4002')
+Engr = xmlrpc.client.ServerProxy('http://'+ IP_list[2] +':4003')
+
+print("Console Starting...FIX ME if you see me again")
+
+
+
+##-------------------BUTTON FUNCTIONS-------------------##
 
 def submission():
     global teamID
@@ -13,9 +32,62 @@ def submission():
         panel.destroy()
         show_sub_window()
 
-def printing():
-    time.sleep(10)
-    print( teamID )
+def startTraining():
+    Thread(target = Helm.start_training).start()
+    Thread(target = Wpns.start_training).start()
+    Thread(target = Engr.start_training).start()
+
+def startRecording():
+    Thread(target = Helm.start_recording).start()
+    Thread(target = Wpns.start_recording).start()
+    Thread(target = Engr.start_recording).start()
+
+def startArtemisM1():
+    subprocess.run(['python', 'Start_Artemis_M1_E.py'])
+    Thread(target = Helm.start_artemis_m1).start()
+    Thread(target = Wpns.start_artemis_m1).start()
+    Thread(target = Engr.start_artemis_m1).start()
+
+def startSurvey1():
+    Thread(target = Helm.start_survey1).start()
+    Thread(target = Wpns.start_survey1).start()
+    Thread(target = Engr.start_survey1).start()
+    subprocess.run(['python', 'Take_Screenshot1_E.py'])
+
+def startM2():
+    Thread(target = Helm.start_m2).start()
+    Thread(target = Wpns.start_m2).start()
+    Thread(target = Engr.start_m2).start()
+    subprocess.run(['python', 'Start_M2_E.py'])
+
+def startSurvey2():
+    Thread(target = Helm.start_survey2).start()
+    Thread(target = Wpns.start_survey2).start()
+    Thread(target = Engr.start_survey2).start()
+    subprocess.run(['python', 'Take_Screenshot2_E.py'])
+
+def startM3():
+    Thread(target = Helm.start_m3).start()
+    Thread(target = Wpns.start_m3).start()
+    Thread(target = Engr.start_m3).start()
+    subprocess.run(['python', 'Start_M3_E.py'])
+
+def startSurvey3():
+    Thread(target = Helm.start_survey3).start()
+    Thread(target = Wpns.start_survey3).start()
+    Thread(target = Engr.start_survey3).start()
+    subprocess.run(['python', 'Take_Screenshot3_E.py'])
+
+def stopRecording():
+    Thread(target = Helm.stop_recording).start()
+    Thread(target = Wpns.stop_recording).start()
+    Thread(target = Engr.stop_recording).start()
+    subprocess.run(['python', 'Stop_Recording_E.py'])
+
+
+
+
+##-------------------TKINTER WINDOW-------------------##
 
 def show_sub_window():
     sub_window = tk.Tk()
@@ -30,31 +102,31 @@ def show_sub_window():
     buttonframe = tk.Frame(sub_window)
     buttonframe.pack(padx=5, pady=5)
 
-    button = tk.Button(buttonframe, text="1. Start Training", width=15, command=printing)
+    button = tk.Button(buttonframe, text="1. Start Training", width=15, command=startTraining)
     button.grid(row=0, column=0, padx=5, pady=5)
 
-    button = tk.Button(buttonframe, text="2. Start Recording", width=15, command=sub_window.destroy)
+    button = tk.Button(buttonframe, text="2. Start Recording", width=15, command=startRecording)
     button.grid(row=0, column=1, padx=5, pady=5)
 
-    button = tk.Button(buttonframe, text="3. Start Mission 1", width=15, command=printing)
+    button = tk.Button(buttonframe, text="3. Start Mission 1", width=15, command=startArtemisM1)
     button.grid(row=1, column=0, padx=5, pady=5)
 
-    button = tk.Button(buttonframe, text="4. Start Survey 1", width=15, command=sub_window.destroy)
+    button = tk.Button(buttonframe, text="4. Start Survey 1", width=15, command=startSurvey1)
     button.grid(row=1, column=1, padx=5, pady=5)
 
-    button = tk.Button(buttonframe, text="5. Start Mission 2", width=15, command=printing)
+    button = tk.Button(buttonframe, text="5. Start Mission 2", width=15, command=startM2)
     button.grid(row=2, column=0, padx=5, pady=5)
 
-    button = tk.Button(buttonframe, text="6. Start Survey 2", width=15, command=sub_window.destroy)
+    button = tk.Button(buttonframe, text="6. Start Survey 2", width=15, command=startSurvey2)
     button.grid(row=2, column=1, padx=5, pady=5)
 
-    button = tk.Button(buttonframe, text="7. Start Mission 3", width=15, command=printing)
+    button = tk.Button(buttonframe, text="7. Start Mission 3", width=15, command=startM3)
     button.grid(row=3, column=0, padx=5, pady=5)
 
-    button = tk.Button(buttonframe, text="8. Start Survey 3", width=15, command=sub_window.destroy)
+    button = tk.Button(buttonframe, text="8. Start Survey 3", width=15, command=startSurvey3)
     button.grid(row=3, column=1, padx=5, pady=5)
 
-    button = tk.Button(buttonframe, text="9. Stop Recording", width=15, command=printing)
+    button = tk.Button(buttonframe, text="9. Stop Recording", width=15, command=stopRecording)
     button.grid(row=4, column=0, padx=5, pady=5)
 
     button = tk.Button(buttonframe, text="placeholder", width=15, command=sub_window.destroy)
@@ -78,9 +150,6 @@ type_field.pack()
 
 submit_button = tk.Button(panel, text="Submit", command= submission)
 submit_button.pack(pady=20)
-
-# print_button = tk.Button(panel, text="print", command= printing)
-# print_button.pack(pady=20)
 
 panel.attributes('-topmost', True)
 panel.mainloop()
