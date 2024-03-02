@@ -45,9 +45,9 @@ def checkConnection():
         messagebox.showerror(title="Connection Error", message="Please update IP_LIST.txt")
 
 def startTraining():
-    Thread(target = Helm.start_training).start()
-    Thread(target = Wpns.start_training).start()
-    Thread(target = Engr.start_training).start()
+    Thread(target = Helm.start_training, args = (teamID,)).start()
+    # Thread(target = Wpns.start_training).start()
+    # Thread(target = Engr.start_training).start()
 
 def startRecording():
     Thread(target = Helm.start_recording).start()
@@ -127,25 +127,25 @@ def show_sub_window():
     button = tk.Button(buttonframe, text="3. Start Mission 1", width=15, command=startArtemisM1)
     button.grid(row=1, column=0, padx=5, pady=5)
 
-    button = tk.Button(buttonframe, text="4. Start Survey 1", width=15, command=startSurvey1)
+    button = tk.Button(buttonframe, text="4. SS & Survey 1", width=15, command=startSurvey1)
     button.grid(row=1, column=1, padx=5, pady=5)
 
     button = tk.Button(buttonframe, text="5. Start Mission 2", width=15, command=startM2)
     button.grid(row=2, column=0, padx=5, pady=5)
 
-    button = tk.Button(buttonframe, text="6. Start Survey 2", width=15, command=startSurvey2)
+    button = tk.Button(buttonframe, text="6. SS & Survey 2", width=15, command=startSurvey2)
     button.grid(row=2, column=1, padx=5, pady=5)
 
     button = tk.Button(buttonframe, text="7. Start Mission 3", width=15, command=startM3)
     button.grid(row=3, column=0, padx=5, pady=5)
 
-    button = tk.Button(buttonframe, text="8. Start Survey 3", width=15, command=startSurvey3)
+    button = tk.Button(buttonframe, text="8. SS & Survey 3", width=15, command=startSurvey3)
     button.grid(row=3, column=1, padx=5, pady=5)
 
     button = tk.Button(buttonframe, text="9. Stop Recording", width=15, command=stopRecording)
     button.grid(row=4, column=0, padx=5, pady=5)
 
-    button = tk.Button(buttonframe, text="placeholder", width=15, command=sub_window.destroy)
+    button = tk.Button(buttonframe, text="10. Log, SS & Video", width=15, command=sub_window.destroy)
     button.grid(row=4, column=1, padx=5, pady=5)
 
     # close_button = tk.Button(sub_window, text="EXIT", command=sub_window.destroy)

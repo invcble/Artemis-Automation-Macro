@@ -14,8 +14,11 @@ party = SimpleXMLRPCServer(('localhost', 4000), allow_none=True)
 def check():
     pass
 
-def start_training():
-    subprocess.run(['python', 'Start_Training_P.py'])
+def start_training(teamID):
+    global party_teamID
+    party_teamID = teamID
+
+    subprocess.run(['python', 'Start_Training_P.py', party_teamID])
 
 def start_recording():
     subprocess.run(['python', 'Start_Recording_P.py'])

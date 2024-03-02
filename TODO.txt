@@ -1,47 +1,46 @@
-####FLOW
-#Experimenter: Start Training
-#Participants: Opens Training.exe
+####    FLOW    ####
 
-#Experimenter: Start Recording
-#Participants: Closes Training.exe,
-########  Starts Kaltura, minimize
+#Button: Start Training
+-->>Participants: Opens Training.exe
 
-#Experimenter: Start Artemis M1
-#Experimenter: Opens Artemis & Loads Mission 1
-#Participants: Opens Artemis, Loads Mission 1 & Ready,
-##(( Experimenter HAS CONTROL TO START ARTEMIS server ))
+#Button: Start Recording
+-->>Participants: Starts Kaltura, minimize
 
-#Experimenter: Start Survey 1
-#Experimenter: Take Screenshot
-#Participants: Open Survey 1
+#Button: Start Mission 1
+====Experimenter: Opens Artemis, Loads Mission 1
+-->>Participants: Opens Artemis, Loads Mission 1, Ready
+***Experimenter HAS CONTROL 
 
-#Experimenter: Start M2
-#Participants: Closes browser,
-########  Loads Mission 2,
-##(( Experimenter HAS CONTROL TO START ARTEMIS Experimenter ))
+#Button: SS & Survey 1
+====Experimenter: Take Screenshot
+-->>Participants: Open Survey 1
 
-#Experimenter: Start Survey 2
-#Experimenter: Take Screenshot
-#Participants: Open Survey 2
+#Button: Start Mission 2
+-->>Participants: Closes browser, Loads Mission 2
+***Experimenter HAS CONTROL 
 
-#Experimenter: Start M3
-#Participants: Closes browser,
-########  Loads Mission 3,
-##(( Experimenter HAS CONTROL TO START ARTEMIS Experimenter ))
+#Button: SS & Survey 2
+====Experimenter: Take Screenshot
+-->>Participants: Open Survey 2
 
-#Experimenter: Start Survey 3
-#Experimenter: Take Screenshot
-#Participants: Open Survey 3
+#Button: Start Mission 3
+-->>Participants: Closes browser, Loads Mission 3
+***Experimenter HAS CONTROL 
 
-#Experimenter: Stop Recording
-#Participants: Closes browser,
-########  Closes Artemis,
-########  Stops Kaltura
+#Button: SS & Survey 3
+====Experimenter: Take Screenshot
+-->>Participants: Open Survey 3
 
-## AT VERY END, Rename POPUP saves ID, writes log file with that ID,
-## send that ID to participants, participants create a folder with name, MOVES current video files
+#Button: Stop Recording
+-->>Participants: Closes browser, Closes Artemis, Stops Kaltura
+
+#Button: Log, SS and Video
+====Experimenter: puts log and excel in the ss folder with teamID
+-->>Participants: puts video in Recording/teamID/role folder
+
 
 
 Disable UAC
-Auto brightness
+exe execution defender warning
 Chrome tweak
+Don't hardcode coordinate and path
