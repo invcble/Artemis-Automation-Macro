@@ -8,9 +8,12 @@ Welcome to my Macro Development Project at LeBow College of Business. This proje
 
 The project is divided into four key components, each targeting a specific area of research operation automation:
 
-1. **RPC Macro**: Enables communication between the experimenter's and participant's PCs to invoke other macros.
-2. **Automation Macro**: Automates the opening, closing, and configuration of various tools (Artemis, screenshots, surveys) for the experiment.
-3. **Performance Metric Macro**: Automates the collection and processing of performance data to excel sheet.
+1. **RPC Macro**:
+   Enables communication between the experimenter's and participant's PCs to invoke other macros.
+2. **Automation Macro**:
+   Automates the opening, closing, and configuration of various tools (Artemis, screenshots, surveys) for the experiment.
+3. **Performance Metric Macro**:
+   Automates the collection and processing of performance data to excel sheet.
 4. **LOG Extractor Macro**: Archives mission logs in an organized and efficient manner.
 
 ## Next Steps
