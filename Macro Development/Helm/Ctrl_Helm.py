@@ -8,8 +8,8 @@ from threading import Thread
 coordinates = "200x100+400+400"
 
 IP = socket.gethostbyname(socket.gethostname()) #auto grabbing IP
-# party = SimpleXMLRPCServer((IP, 4001), allow_none=True)
-party = SimpleXMLRPCServer(('localhost', 4000), allow_none=True)
+party = SimpleXMLRPCServer((IP, 4001), allow_none=True)
+# party = SimpleXMLRPCServer(('localhost', 4000), allow_none=True)
 
 def check():
     pass
@@ -18,7 +18,7 @@ def start_training(teamID):
     global party_teamID
     party_teamID = teamID
 
-    subprocess.run(['python', 'Start_Training_P.py', party_teamID])
+    subprocess.run(['python', 'Start_Training_P.py'])
 
 def start_recording():
     subprocess.run(['python', 'Start_Recording_P.py'])
@@ -33,13 +33,13 @@ def start_m2():
     subprocess.run(['python', 'Start_M2_P.py'])
 
 def start_survey2():
-    subprocess.run(['python', 'Start_Survey2_P.py'])
+    subprocess.run(['python', 'Start_Survey2_P.py', party_teamID])
 
 def start_m3():
     subprocess.run(['python', 'Start_M3_P.py'])
 
 def start_survey3():
-    subprocess.run(['python', 'Start_Survey3_P.py'])
+    subprocess.run(['python', 'Start_Survey3_P.py', party_teamID])
 
 def stop_recording():
     subprocess.run(['python', 'Stop_Recording_P.py'])

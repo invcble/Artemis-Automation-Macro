@@ -14,8 +14,6 @@ with open("IP_LIST.txt") as file:
         IP_list.append( line.strip().split(": ")[1] )
 
 # Helm = xmlrpc.client.ServerProxy('http://localhost:4000')
-# Wpns = xmlrpc.client.ServerProxy('http://localhost:4000')
-# Engr = xmlrpc.client.ServerProxy('http://localhost:4000')
 Helm = xmlrpc.client.ServerProxy('http://'+ IP_list[0] +':4001')
 Wpns = xmlrpc.client.ServerProxy('http://'+ IP_list[1] +':4002')
 Engr = xmlrpc.client.ServerProxy('http://'+ IP_list[2] +':4003')
@@ -76,7 +74,7 @@ def startSurvey2():
     Thread(target = Helm.start_survey2).start()
     Thread(target = Wpns.start_survey2).start()
     Thread(target = Engr.start_survey2).start()
-    subprocess.run(['python', 'Take_Screenshot2_E.py'])
+    subprocess.run(['python', 'Take_Screenshot2_E.py', teamID])
 
 def startM3():
     Thread(target = Helm.start_m3).start()
@@ -88,7 +86,7 @@ def startSurvey3():
     Thread(target = Helm.start_survey3).start()
     Thread(target = Wpns.start_survey3).start()
     Thread(target = Engr.start_survey3).start()
-    subprocess.run(['python', 'Take_Screenshot3_E.py'])
+    subprocess.run(['python', 'Take_Screenshot3_E.py', teamID])
 
 def stopRecording():
     Thread(target = Helm.stop_recording).start()
