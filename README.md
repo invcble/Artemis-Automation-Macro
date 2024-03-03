@@ -15,7 +15,7 @@ The project is divided into four key components, each targeting a specific area 
 
 ## Next Steps
 
-Integrate all macros together through the overall project workflow for streamlined operation.
+Integrate all macros together for a streamlined operation and ease of access.
 
 ## Contact Information
 
