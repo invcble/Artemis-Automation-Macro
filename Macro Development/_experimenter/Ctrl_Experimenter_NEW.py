@@ -94,6 +94,12 @@ def stopRecording():
     Thread(target = Engr.stop_recording).start()
     subprocess.run(['python', 'Stop_Recording_E.py'])
 
+#not implemented yet
+def logVideo():
+    Thread(target = Helm.move_video).start()
+    Thread(target = Wpns.move_video).start()
+    Thread(target = Engr.move_video).start()
+    subprocess.run(['python', 'move_log_E.py', teamID])
 
 
 
@@ -143,7 +149,7 @@ def show_sub_window():
     button = tk.Button(buttonframe, text="9. Stop Recording", width=15, command=stopRecording)
     button.grid(row=4, column=0, padx=5, pady=5)
 
-    button = tk.Button(buttonframe, text="10. Log, SS & Video", width=15, command=sub_window.destroy)
+    button = tk.Button(buttonframe, text="10. Log & Video", width=15, command=logVideo)
     button.grid(row=4, column=1, padx=5, pady=5)
 
     # close_button = tk.Button(sub_window, text="EXIT", command=sub_window.destroy)

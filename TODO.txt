@@ -1,4 +1,4 @@
-####    FLOW    ####
+-------------FLOW-------------
 
 #Button: Start Training
 -->>Participants: Opens Training.exe
@@ -37,17 +37,24 @@
 #Button: Log, SS and Video
 ====Experimenter: puts log and excel in the ss folder with teamID
 -->>Participants: puts video in Recording/teamID/role folder
+-------------------------------
 
 
+--------------LOG--------------
 multithread fix,
+UI connect, party UI
 connection check,
 browser,
-ID Pass
+ID Pass,
+-------------------------------
+
+
+-------------NOTES-------------
 new dir = C:\\ARTEMIS\\teamID
 change training exe locationn = C:\\ARTEMIS\\Helm Training.exe
 Disable UAC
 exe execution defender warning
 Don't hardcode coordinate
-
+-------------------------------
 
 pyinstaller --onefile --noconsole --add-binary "surveybrowser.exe;." test.py

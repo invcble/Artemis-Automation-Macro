@@ -44,8 +44,9 @@ def start_survey3():
 def stop_recording():
     subprocess.run(['python', 'Stop_Recording_P.py'])
 
-def idShare(ID):
-    print("Printing ID on server: "+ ID)
+#not implemented yet
+def move_video():
+    subprocess.run(['python', 'move_video_P.py', party_teamID])
 
 def stopMacro():
     if( messagebox.askyesno(title="WARNING!!!", message="Are you sure?") ):
@@ -64,7 +65,7 @@ party.register_function(start_survey2)
 party.register_function(start_m3)
 party.register_function(start_survey3)
 party.register_function(stop_recording)
-party.register_function(idShare)
+party.register_function(move_video)
 
 print("Server Starting...\n")
 Thread(target=party.serve_forever).start()
