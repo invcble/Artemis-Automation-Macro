@@ -13,10 +13,10 @@ with open("IP_LIST.txt") as file:
     for line in file:
         IP_list.append( line.strip().split(": ")[1] )
 
-Helm = xmlrpc.client.ServerProxy('http://localhost:4000')
+# Helm = xmlrpc.client.ServerProxy('http://localhost:4000')
 # Wpns = xmlrpc.client.ServerProxy('http://localhost:4000')
 # Engr = xmlrpc.client.ServerProxy('http://localhost:4000')
-# Helm = xmlrpc.client.ServerProxy('http://'+ IP_list[0] +':4001')
+Helm = xmlrpc.client.ServerProxy('http://'+ IP_list[0] +':4001')
 Wpns = xmlrpc.client.ServerProxy('http://'+ IP_list[1] +':4002')
 Engr = xmlrpc.client.ServerProxy('http://'+ IP_list[2] +':4003')
 
@@ -46,8 +46,8 @@ def checkConnection():
 
 def startTraining():
     Thread(target = Helm.start_training, args = (teamID,)).start()
-    # Thread(target = Wpns.start_training, args = (teamID,)).start()
-    # Thread(target = Engr.start_training, args = (teamID,)).start()
+    Thread(target = Wpns.start_training, args = (teamID,)).start()
+    Thread(target = Engr.start_training, args = (teamID,)).start()
 
 def startRecording():
     Thread(target = Helm.start_recording).start()
@@ -62,8 +62,8 @@ def startArtemisM1():
 
 def startSurvey1():
     Thread(target = Helm.start_survey1).start()
-    # Thread(target = Wpns.start_survey1).start()
-    # Thread(target = Engr.start_survey1).start()
+    Thread(target = Wpns.start_survey1).start()
+    Thread(target = Engr.start_survey1).start()
     subprocess.run(['python', 'Take_Screenshot1_E.py', teamID])
 
 def startM2():

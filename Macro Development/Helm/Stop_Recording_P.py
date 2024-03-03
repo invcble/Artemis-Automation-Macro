@@ -4,10 +4,7 @@ import pygetwindow as gw
 import pyautogui as pag
 
 time.sleep(1)
-pag.moveTo(383,28) #Closechrome
-pag.mouseUp()
-pag.mouseDown()
-pag.mouseUp()
+os.system("taskkill /im surveybrowser.exe /f") #Closebrowser
 time.sleep(2)
 os.system("taskkill /im Artemis.exe /f")
 time.sleep(2)
@@ -31,4 +28,13 @@ time.sleep(1)
 pag.mouseUp()
 pag.mouseDown()
 pag.mouseUp()
+time.sleep(5)
+pag.moveTo(1260,1029) #Save&upload
+pag.mouseUp()
+pag.mouseDown()
+pag.mouseUp()
 time.sleep(1)
+pag.moveTo(1133,755) #Confirmupload
+pag.mouseUp()
+pag.mouseDown()
+pag.mouseUp()

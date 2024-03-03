@@ -32,15 +32,22 @@
 -->>Participants: Open Survey 3
 
 #Button: Stop Recording
--->>Participants: Closes browser, Closes Artemis, Stops Kaltura
+-->>Participants: Closes browser, Closes Artemis, Stops Kaltura, save&upload
 
 #Button: Log, SS and Video
 ====Experimenter: puts log and excel in the ss folder with teamID
 -->>Participants: puts video in Recording/teamID/role folder
 
 
+multithread fix,
+connection check,
+browser,
+ID Pass
 new dir = C:\\ARTEMIS\\teamID
+change training exe locationn = C:\\ARTEMIS\\Helm Training.exe
 Disable UAC
 exe execution defender warning
-Chrome tweak
-Don't hardcode coordinate and path
+Don't hardcode coordinate
+
+
+pyinstaller --onefile --noconsole --add-binary "surveybrowser.exe;." test.py

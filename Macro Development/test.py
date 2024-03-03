@@ -1,8 +1,7 @@
-# import subprocess
+import subprocess
 
-# teamID = str(69696968)
 
-# subprocess.run(['python', 'Take_Screenshot1_E.py', teamID])
-import os
 
-os.system("taskkill /im msedge.exe /f")
+ID = '1000000001'
+
+subprocess.run(['python', 'Start_Survey1_P.py', ID])
