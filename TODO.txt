@@ -57,4 +57,7 @@ exe execution defender warning
 Don't hardcode coordinate
 -------------------------------
 
+pip install pyautogui
+pip install pyscreeze
+pip install pillow
 pyinstaller --onefile --noconsole --add-binary "surveybrowser.exe;." test.py
