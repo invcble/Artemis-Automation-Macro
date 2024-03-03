@@ -8,36 +8,17 @@ Welcome to my Macro Development Project at LeBow College of Business. This proje
 
 The project is divided into four key components, each targeting a specific area of research operation automation:
 
-1. **RPC Macro**: Sets up remote communication and command execution.
-2. **Automation Macro**: Manages the automated handling of software and survey tools.
-3. **Performance Metric Macro**: Automates the collection and processing of performance data.
+1. **RPC Macro**:
+   Enables communication between the experimenter's and participant's PCs to invoke other macros.
+2. **Automation Macro**:
+   Automates the opening, closing, and configuration of various tools (Artemis, screenshots, surveys) for the experiment.
+3. **Performance Metric Macro**:
+   Automates the collection and processing of performance data to excel sheet.
 4. **LOG Extractor Macro**: Archives mission logs in an organized and efficient manner.
-
-## Current Status
-
-### RPC Macro
-
-- **Purpose**: Enables communication between the experimenter's and participant's PCs to invoke other macros.
-- **Status**: Ongoing. Basic functionality implemented but requires updates for specific commands.
-
-### Automation Macro
-
-- **Purpose**: Automates the opening, closing, and configuration of various tools for the research process.
-- **Status**: Ongoing. Halfway through development; needs integration of direct readings from the participant's computer.
-
-### Performance Metric Macro
-
-- **Purpose**: Facilitates the migration of data processing functions from Perl scripts, aiming to output data to Excel for analysis.
-- **Status**: Completed and tested. Working as intended, generates Excel file and includes it in LOG extractor.
-
-### LOG Extractor Macro
-
-- **Purpose**: Organizes and stores mission log files in a zip format for future reference.
-- **Status**: Completed and tested. Working as intended and fulfilling its logging and archiving role.
 
 ## Next Steps
 
-Integrate all macros together through the overall project workflow for streamlined operation.
+Integrate all macros together for a streamlined operation and ease of access.
 
 ## Contact Information
 
