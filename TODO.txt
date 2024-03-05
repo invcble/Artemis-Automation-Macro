@@ -50,6 +50,7 @@ ID Pass
 
 
 -------------NOTES-------------
+check whatsapp
 new dir = C:\\ARTEMIS\\teamID
 change training exe locationn = C:\\ARTEMIS\\Helm Training.exe
 Disable UAC
@@ -59,7 +60,15 @@ exe execution defender warning
 Randomized experimental design on dynamic team composition
 supporting large research grant
 
+pyinstaller --onefile --noconsole --add-binary "surveybrowser.exe;." test.py
+
+-------------SETUP-------------
 pip install pyautogui
 pip install pyscreeze
 pip install pillow
-pyinstaller --onefile --noconsole --add-binary "surveybrowser.exe;." test.py
+
+create path C:/kaltura, assign to kaltura (reinstall)
+enable auto minimize when recording
+
+
+-------------------------------

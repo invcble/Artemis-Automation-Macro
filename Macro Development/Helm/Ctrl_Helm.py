@@ -8,8 +8,8 @@ from threading import Thread
 coordinates = "200x100+550+400"
 
 IP = socket.gethostbyname(socket.gethostname()) #auto grabbing IP
-party = SimpleXMLRPCServer((IP, 4001), allow_none=True)
-# party = SimpleXMLRPCServer(('localhost', 4000), allow_none=True)
+# party = SimpleXMLRPCServer((IP, 4001), allow_none=True)
+party = SimpleXMLRPCServer(('localhost', 4000), allow_none=True)
 
 def check():
     pass
@@ -41,16 +41,29 @@ def start_survey3(party_teamID):
 def stop_recording():
     subprocess.run(['python', 'Stop_Recording_P.py'])
 
-#not implemented yet
 def move_video(party_teamID):
     subprocess.run(['python', 'move_video_P.py', party_teamID])
 
 def stopMacro():
-    if( messagebox.askyesno(title="WARNING!!!", message="Are you sure?") ):
+    if( messagebox.askyesno(title="!!! WARNING !!!", message="Are you sure?") ):
+        global pwd_panel, pwd_field
+
+        pwd_panel = tk.Toplevel(panel)
+        pwd_panel.geometry(coordinates)
+        pwd_panel.resizable(False, False)
+        pwd_panel.title("Exit")
+        tk.Label(pwd_panel, text="Please enter the password").pack(pady=5)
+
+        pwd_field = tk.Entry(pwd_panel, show="*")
+        pwd_field.pack(pady=5)
+
+        tk.Button(pwd_panel, text="Submit", command= checkPWD).pack(pady=5)
+
+def checkPWD():
+    if pwd_field.get() == "artemis":
         party.shutdown()
         party.server_close()
         panel.destroy()
-
 
 party.register_function(check)
 party.register_function(start_training)
@@ -72,6 +85,7 @@ panel = tk.Tk()
 panel.geometry(coordinates)
 panel.resizable(False, False)
 panel.title("Helm")
+panel.protocol("WM_DELETE_WINDOW", lambda: None)
 
 label = tk.Label(panel, text="Macro is running\n Please do not touch anything")
 label.pack(pady=5)

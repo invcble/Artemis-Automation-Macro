@@ -13,10 +13,10 @@ with open("IP_LIST.txt") as file:
     for line in file:
         IP_list.append( line.strip().split(": ")[1] )
 
-# Helm = xmlrpc.client.ServerProxy('http://localhost:4000')
-Helm = xmlrpc.client.ServerProxy('http://'+ IP_list[0] +':4001')
-Wpns = xmlrpc.client.ServerProxy('http://'+ IP_list[1] +':4002')
-Engr = xmlrpc.client.ServerProxy('http://'+ IP_list[2] +':4003')
+Helm = xmlrpc.client.ServerProxy('http://localhost:4000')
+# Helm = xmlrpc.client.ServerProxy('http://'+ IP_list[0] +':4001')
+# Wpns = xmlrpc.client.ServerProxy('http://'+ IP_list[1] +':4002')
+# Engr = xmlrpc.client.ServerProxy('http://'+ IP_list[2] +':4003')
 
 print("Console Starting...")
 
@@ -40,7 +40,7 @@ def checkConnection():
         # Engr.check()
         messagebox.showinfo(title="Connection OK", message="All are connected")
     except:
-        messagebox.showerror(title="Connection Error", message="Please update IP_LIST.txt")
+        messagebox.showerror(title="Connection Error", message="Please make sure macro controllers are running on participants. If they are, please update IP_LIST.txt")
 
 def startTraining():
     Thread(target = Helm.start_training).start()
@@ -100,7 +100,7 @@ def stopRecording():
     Thread(target = Helm.stop_recording).start()
     # Thread(target = Wpns.stop_recording).start()
     # Thread(target = Engr.stop_recording).start()
-    subprocess.run(['python', 'Stop_Recording_E.py'])
+    subprocess.run(['python', 'Stop_Artemis_E.py'])
     time.sleep(5)
 
 #not implemented yet
@@ -108,7 +108,7 @@ def logVideo():
     Thread(target = Helm.move_video, args = (teamID,)).start()
     # Thread(target = Wpns.move_video).start()
     # Thread(target = Engr.move_video).start()
-    subprocess.run(['python', 'move_log_E.py', teamID])
+    # subprocess.run(['python', 'move_log_E.py', teamID])
     time.sleep(5)
 
 
@@ -161,10 +161,6 @@ def show_sub_window():
 
     button = tk.Button(buttonframe, text="10. Log & Video", width=15, command=logVideo)
     button.grid(row=4, column=1, padx=5, pady=5)
-
-    # close_button = tk.Button(sub_window, text="EXIT", command=sub_window.destroy)
-    # close_button.pack(pady=5, padx=5)
-
 
 
 panel = tk.Tk()
