@@ -21,7 +21,7 @@ time.sleep(2)
 pag.moveTo(1741,1029) #Connectserver
 pag.mouseDown()
 pag.mouseUp()
-time.sleep(2)
+time.sleep(5)
 pag.moveTo(787,479) #Ship1
 pag.mouseDown()
 pag.mouseUp()

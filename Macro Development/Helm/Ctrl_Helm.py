@@ -5,7 +5,7 @@ import tkinter as tk
 from tkinter import messagebox
 from threading import Thread
 
-coordinates = "200x100+400+400"
+coordinates = "200x100+550+400"
 
 IP = socket.gethostbyname(socket.gethostname()) #auto grabbing IP
 party = SimpleXMLRPCServer((IP, 4001), allow_none=True)
@@ -14,10 +14,7 @@ party = SimpleXMLRPCServer((IP, 4001), allow_none=True)
 def check():
     pass
 
-def start_training(teamID):
-    global party_teamID
-    party_teamID = teamID
-
+def start_training():
     subprocess.run(['python', 'Start_Training_P.py'])
 
 def start_recording():
@@ -26,26 +23,26 @@ def start_recording():
 def start_artemis_m1():
     subprocess.run(['python', 'Start_Artemis_M1_P.py'])
 
-def start_survey1():
+def start_survey1(party_teamID):
     subprocess.run(['python', 'Start_Survey1_P.py', party_teamID])
 
 def start_m2():
     subprocess.run(['python', 'Start_M2_P.py'])
 
-def start_survey2():
+def start_survey2(party_teamID):
     subprocess.run(['python', 'Start_Survey2_P.py', party_teamID])
 
 def start_m3():
     subprocess.run(['python', 'Start_M3_P.py'])
 
-def start_survey3():
+def start_survey3(party_teamID):
     subprocess.run(['python', 'Start_Survey3_P.py', party_teamID])
 
 def stop_recording():
     subprocess.run(['python', 'Stop_Recording_P.py'])
 
 #not implemented yet
-def move_video():
+def move_video(party_teamID):
     subprocess.run(['python', 'move_video_P.py', party_teamID])
 
 def stopMacro():

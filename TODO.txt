@@ -45,7 +45,7 @@ multithread fix,
 UI connect, party UI
 connection check,
 browser,
-ID Pass,
+ID Pass
 -------------------------------
 
 
@@ -54,8 +54,10 @@ new dir = C:\\ARTEMIS\\teamID
 change training exe locationn = C:\\ARTEMIS\\Helm Training.exe
 Disable UAC
 exe execution defender warning
-Don't hardcode coordinate
 -------------------------------
+
+Randomized experimental design on dynamic team composition
+supporting large research grant
 
 pip install pyautogui
 pip install pyscreeze

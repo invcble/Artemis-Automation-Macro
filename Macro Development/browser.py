@@ -6,7 +6,7 @@ from PyQt5.QtWebEngineWidgets import QWebEngineView, QWebEngineProfile
 app = QApplication(sys.argv)
 window = QMainWindow()
 window.setWindowTitle("Survey Browser")
-window.setGeometry(100, 100, 800, 600)
+window.setGeometry(200, 100, 1500, 1000)
 
 browser = QWebEngineView(window)
 window.setCentralWidget(browser)
