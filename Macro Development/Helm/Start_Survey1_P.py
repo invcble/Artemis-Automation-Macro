@@ -12,7 +12,7 @@ def survey():
 
 time.sleep(1)
 Thread(target=survey).start()
-time.sleep(20)
+time.sleep(25)
 
 #CHANGE COORDINATES
 pag.moveTo(750,400) #Gototextfield

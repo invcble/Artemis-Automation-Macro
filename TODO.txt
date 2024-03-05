@@ -55,6 +55,7 @@ new dir = C:\\ARTEMIS\\teamID
 change training exe locationn = C:\\ARTEMIS\\Helm Training.exe
 Disable UAC
 exe execution defender warning
+added delay in survey
 -------------------------------
 
 Randomized experimental design on dynamic team composition
