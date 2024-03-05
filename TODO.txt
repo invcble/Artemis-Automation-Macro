@@ -67,6 +67,7 @@ pyinstaller --onefile --noconsole --add-binary "surveybrowser.exe;." test.py
 pip install pyautogui
 pip install pyscreeze
 pip install pillow
+pip install xlsxwriter
 
 create path C:/kaltura, assign to kaltura (reinstall)
 enable auto minimize when recording

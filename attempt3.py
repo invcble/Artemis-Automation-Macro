@@ -4,7 +4,7 @@ import sys
 import xlsxwriter
 from datetime import datetime
 import zipfile
-import pyautogui
+
 
 MM = datetime.now().minute
 DD = getattr(datetime.now(), 'hour')

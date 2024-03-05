@@ -63,8 +63,8 @@ def startArtemisM1():
 
 def startSurvey1():
     Thread(target = Helm.start_survey1, args = (teamID,)).start()
-    # Thread(target = Wpns.start_survey1).start()
-    # Thread(target = Engr.start_survey1).start()
+    # Thread(target = Wpns.start_survey1, args = (teamID,)).start()
+    # Thread(target = Engr.start_survey1, args = (teamID,)).start()
     subprocess.run(['python', 'Take_Screenshot1_E.py', teamID])
     time.sleep(5)
 
@@ -77,8 +77,8 @@ def startM2():
 
 def startSurvey2():
     Thread(target = Helm.start_survey2, args = (teamID,)).start()
-    # Thread(target = Wpns.start_survey2).start()
-    # Thread(target = Engr.start_survey2).start()
+    # Thread(target = Wpns.start_survey2, args = (teamID,)).start()
+    # Thread(target = Engr.start_survey2, args = (teamID,)).start()
     subprocess.run(['python', 'Take_Screenshot2_E.py', teamID])
     time.sleep(5)
 
@@ -91,8 +91,8 @@ def startM3():
 
 def startSurvey3():
     Thread(target = Helm.start_survey3, args = (teamID,)).start()
-    # Thread(target = Wpns.start_survey3).start()
-    # Thread(target = Engr.start_survey3).start()
+    # Thread(target = Wpns.start_survey3, args = (teamID,)).start()
+    # Thread(target = Engr.start_survey3, args = (teamID,)).start()
     subprocess.run(['python', 'Take_Screenshot3_E.py', teamID])
     time.sleep(5)
 
@@ -106,9 +106,9 @@ def stopRecording():
 #not implemented yet
 def logVideo():
     Thread(target = Helm.move_video, args = (teamID,)).start()
-    # Thread(target = Wpns.move_video).start()
-    # Thread(target = Engr.move_video).start()
-    # subprocess.run(['python', 'move_log_E.py', teamID])
+    # Thread(target = Wpns.move_video, args = (teamID,)).start()
+    # Thread(target = Engr.move_video, args = (teamID,)).start()
+    subprocess.run(['python', 'move_log_E.py', teamID])
     time.sleep(5)
 
 
