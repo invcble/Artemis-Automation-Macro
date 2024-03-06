@@ -16,12 +16,12 @@ if kaltura:
     if kaltura.isMinimized:
         kaltura.restore()
     kaltura.activate()
-time.sleep(5)
+time.sleep(2)
 pag.mouseUp()
 
 pag.moveTo(1455,1033) #Stoprecord
-time.sleep(1)
 pag.mouseUp()
+time.sleep(1)
 pag.mouseDown()
 pag.mouseUp()
 pag.moveTo(1510,923) #Stopconfirmation
