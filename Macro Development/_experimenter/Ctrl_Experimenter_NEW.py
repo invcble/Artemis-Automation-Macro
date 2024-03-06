@@ -4,26 +4,23 @@ import xmlrpc.client
 import time
 import subprocess
 from threading import Thread
+import sys
 
 
 coordinates = "300x300+400+400"
 IP_list = []
 
 try:
-    with open("IP_LIST.txt") as file:
+    with open("C:\\ARTEMIS\\IP_LIST.txt") as file:
         for line in file:
             IP_list.append( line.strip().split(": ")[1] )
 except:
     messagebox.showerror(title="Error", message="Could not find IP_LIST.txt")
-    exit()
+    sys.exit()
 
-# Helm = xmlrpc.client.ServerProxy('http://localhost:4000')
 Helm = xmlrpc.client.ServerProxy('http://'+ IP_list[0] +':4001')
 Wpns = xmlrpc.client.ServerProxy('http://'+ IP_list[1] +':4002')
 Engr = xmlrpc.client.ServerProxy('http://'+ IP_list[2] +':4003')
-# Helm = xmlrpc.client.ServerProxy('http://10.250.24.241:4001')
-# Wpns = xmlrpc.client.ServerProxy('http://10.250.126.66:4002')
-# Engr = xmlrpc.client.ServerProxy('http://10.250.122.60:4003')
 
 print("Console Starting...")
 

@@ -1,15 +1,26 @@
 from xmlrpc.server import SimpleXMLRPCServer
-import socket
+import sys
 import subprocess
 import tkinter as tk
 from tkinter import messagebox
 from threading import Thread
 
 coordinates = "200x100+550+400"
+IP_list = []
 
-IP = socket.gethostbyname(socket.gethostname()) #auto grabbing IP
-party = SimpleXMLRPCServer((IP, 4001), allow_none=True)
-# party = SimpleXMLRPCServer(('localhost', 4000), allow_none=True)
+try:
+    with open("C:\\ARTEMIS\\IP_LIST.txt") as file:
+        for line in file:
+            IP_list.append( line.strip().split(": ")[1] )
+except:
+    messagebox.showerror(title="Error", message="Could not find IP_LIST.txt")
+    sys.exit()
+
+try:
+    party = SimpleXMLRPCServer(( IP_list[0] , 4001), allow_none=True)
+except:
+    messagebox.showerror(title="Error", message="Wrong Helm IP,\nPlease update IP_LIST.txt")
+    sys.exit()
 
 def check():
     pass
