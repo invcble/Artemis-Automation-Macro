@@ -40,8 +40,8 @@ def submission():
 def checkConnection():
     try:
         Helm.check()
-        # Wpns.check()
-        # Engr.check()
+        Wpns.check()
+        Engr.check()
         messagebox.showinfo(title="Connection OK", message="All are connected")
     except:
         messagebox.showerror(title="Connection Error", message="Please make sure macro controllers are running on all participants. If they are, please update IP_LIST.txt")
