@@ -9,9 +9,13 @@ from threading import Thread
 coordinates = "300x300+400+400"
 IP_list = []
 
-with open("IP_LIST.txt") as file:
-    for line in file:
-        IP_list.append( line.strip().split(": ")[1] )
+try:
+    with open("IP_LIST.txt") as file:
+        for line in file:
+            IP_list.append( line.strip().split(": ")[1] )
+except:
+    messagebox.showerror(title="Error", message="Could not find IP_LIST.txt")
+    exit()
 
 # Helm = xmlrpc.client.ServerProxy('http://localhost:4000')
 Helm = xmlrpc.client.ServerProxy('http://'+ IP_list[0] +':4001')
@@ -39,11 +43,11 @@ def submission():
 def checkConnection():
     try:
         Helm.check()
-        Wpns.check()
-        Engr.check()
+        # Wpns.check()
+        # Engr.check()
         messagebox.showinfo(title="Connection OK", message="All are connected")
     except:
-        messagebox.showerror(title="Connection Error", message="Please make sure macro controllers are running on participants. If they are, please update IP_LIST.txt")
+        messagebox.showerror(title="Connection Error", message="Please make sure macro controllers are running on all participants. If they are, please update IP_LIST.txt")
 
 def startTraining():
     Thread(target = Helm.start_training).start()

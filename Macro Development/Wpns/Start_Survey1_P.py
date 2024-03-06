@@ -8,7 +8,7 @@ passed_variable = sys.argv[1]
 URL = 'https://drexel.qualtrics.com/jfe/form/SV_2gbBTwyemTFj46W'
 
 def survey():
-    subprocess.Popen(["surveybrowser.exe", URL], creationflags=subprocess.CREATE_NEW_CONSOLE)
+    subprocess.Popen(["C:\\ARTEMIS\\surveybrowser.exe", URL], creationflags=subprocess.CREATE_NEW_CONSOLE)
 
 time.sleep(1)
 Thread(target=survey).start()
