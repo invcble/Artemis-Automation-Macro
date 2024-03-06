@@ -7,16 +7,17 @@ time.sleep(1)
 os.system("taskkill /im surveybrowser.exe /f") #Closebrowser
 time.sleep(2)
 os.system("taskkill /im Artemis.exe /f")
-time.sleep(2)
+time.sleep(5)
 
 kaltura = gw.getWindowsWithTitle("Kaltura Capture")[1]
-time.sleep(2)
+time.sleep(3)
 
 if kaltura:
     if kaltura.isMinimized:
         kaltura.restore()
     kaltura.activate()
-time.sleep(3)
+time.sleep(5)
+pag.mouseUp()
 
 pag.moveTo(1455,1033) #Stoprecord
 time.sleep(1)

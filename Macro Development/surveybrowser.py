@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtCore import QUrl
+from PyQt5.QtCore import QUrl, Qt
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtWebEngineWidgets import QWebEngineView, QWebEngineProfile
 
@@ -16,6 +16,8 @@ profile.setPersistentCookiesPolicy(QWebEngineProfile.NoPersistentCookies)
 
 url = QUrl.fromUserInput(sys.argv[1])
 browser.setUrl(url)
+
+window.setWindowFlags(window.windowFlags() | Qt.WindowStaysOnTopHint)
 
 window.show()
 sys.exit(app.exec_())

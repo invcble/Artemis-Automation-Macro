@@ -17,6 +17,9 @@ with open("IP_LIST.txt") as file:
 Helm = xmlrpc.client.ServerProxy('http://'+ IP_list[0] +':4001')
 Wpns = xmlrpc.client.ServerProxy('http://'+ IP_list[1] +':4002')
 Engr = xmlrpc.client.ServerProxy('http://'+ IP_list[2] +':4003')
+# Helm = xmlrpc.client.ServerProxy('http://10.250.24.241:4001')
+# Wpns = xmlrpc.client.ServerProxy('http://10.250.126.66:4002')
+# Engr = xmlrpc.client.ServerProxy('http://10.250.122.60:4003')
 
 print("Console Starting...")
 

@@ -8,8 +8,8 @@ from threading import Thread
 coordinates = "200x100+550+400"
 
 IP = socket.gethostbyname(socket.gethostname()) #auto grabbing IP
-# party = SimpleXMLRPCServer((IP, 4001), allow_none=True)
-party = SimpleXMLRPCServer(('localhost', 4000), allow_none=True)
+party = SimpleXMLRPCServer((IP, 4001), allow_none=True)
+# party = SimpleXMLRPCServer(('localhost', 4000), allow_none=True)
 
 def check():
     pass

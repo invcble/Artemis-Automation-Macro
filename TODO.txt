@@ -41,11 +41,8 @@
 
 
 --------------LOG--------------
-multithread fix,
-UI connect, party UI
-connection check,
-browser,
-ID Pass
+
+
 -------------------------------
 
 

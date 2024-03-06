@@ -12,17 +12,17 @@ def survey():
 
 time.sleep(1)
 Thread(target=survey).start()
-time.sleep(25)
+time.sleep(40)
 
 #CHANGE COORDINATES
-pag.moveTo(750,400) #Gototextfield
+pag.moveTo(750,440) #Gototextfield
 pag.mouseUp()
 pag.mouseDown()
 pag.mouseUp()
 time.sleep(1)
 pag.write(passed_variable)
 time.sleep(1)
-pag.moveTo(1295,534) #Pressnext
+pag.moveTo(1295,574) #Pressnext
 pag.mouseUp()
 pag.mouseDown()
 pag.mouseUp()

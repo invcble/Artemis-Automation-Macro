@@ -1,8 +1,9 @@
 import shutil
 import xlsxwriter
+import sys
 
-# passed_variable = sys.argv[1]
-passed_variable = str(99)
+passed_variable = sys.argv[1]
+# passed_variable = str(99)
 
 source = "C:\\Program Files (x86)\\Artemis\\dat\\Missions\\"
 destination = "C:\\ARTEMIS\\" + passed_variable + "\\"
