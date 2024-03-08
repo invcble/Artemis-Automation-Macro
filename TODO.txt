@@ -47,18 +47,19 @@
 
 
 -------------NOTES-------------
-check whatsapp
-new dir = C:\\ARTEMIS\\teamID
-change training exe locationn = C:\\ARTEMIS\\Helm Training.exe
-Disable UAC
-exe execution defender warning
-added delay in survey
+
+
 -------------------------------
 
 Randomized experimental design on dynamic team composition
 supporting large research grant
 
-pyinstaller --onefile --noconsole --add-binary "surveybrowser.exe;." test.py
+
+pyinstaller --onefile --add-data "Take_Screenshot1_E.py;." --add-data "Take_Screenshot2_E.py;." --add-data "Take_Screenshot3_E.py;." --add-data "Start_Artemis_M1_E.py;." --add-data "Start_M2_E.py;." --add-data "Start_M3_E.py;." --add-data "Stop_Artemis_E.py;." --add-data "move_log_E.py;." Ctrl_Experimenter_NEW.py
+
+
+pyinstaller --onefile --add-data "Start_Survey1_P.py;." --add-data "Start_Survey3_P.py;." --add-data "Start_Survey2_P.py;." --add-data "Stop_Recording_P.py;." --add-data "move_video_P.py;." --add-data "Start_Artemis_M1_P.py;." --add-data "Start_M2_P.py;." --add-data "Start_M3_P.py;." --add-data "Start_Recording_P.py;." --add-data "Start_Training_P.py;." Ctrl_Helm.py
+
 
 -------------SETUP-------------
 pip install pyautogui
@@ -69,5 +70,13 @@ pip install xlsxwriter
 create path C:/kaltura, assign to kaltura (reinstall)
 enable auto minimize when recording
 
+disable UAC
+
+===  C:/ARTEMIS/  ===
+----------participants
+training.exe
+surverybrowser.exe
+----------experimenter
+IP_LIST.txt
 
 -------------------------------
