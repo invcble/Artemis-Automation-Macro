@@ -21,11 +21,11 @@ pag.mouseUp()
 
 pag.moveTo(1455,1033) #Stoprecord
 pag.mouseUp()
-time.sleep(1)
+time.sleep(2)
 pag.mouseDown()
 pag.mouseUp()
 pag.moveTo(1510,923) #Stopconfirmation
-time.sleep(1)
+time.sleep(2)
 pag.mouseUp()
 pag.mouseDown()
 pag.mouseUp()
@@ -34,7 +34,7 @@ pag.moveTo(1260,1029) #Save&upload
 pag.mouseUp()
 pag.mouseDown()
 pag.mouseUp()
-time.sleep(1)
+time.sleep(3)
 pag.moveTo(1133,755) #Confirmupload
 pag.mouseUp()
 pag.mouseDown()

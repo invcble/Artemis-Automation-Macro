@@ -5,6 +5,7 @@ import time
 import subprocess
 from threading import Thread
 import sys
+import os
 
 
 coordinates = "300x300+400+400"
@@ -46,6 +47,11 @@ def checkConnection():
     except:
         messagebox.showerror(title="Connection Error", message="Please make sure macro controllers are running on all participants. If they are, please update IP_LIST.txt")
 
+def start_script(script_name, *args):
+    bundle_dir = getattr(sys, '_MEIPASS', os.path.abspath(os.path.dirname(__file__)))
+    script_path = os.path.join(bundle_dir, script_name)
+    subprocess.run(['python', script_path, *args])
+
 def startTraining():
     Thread(target = Helm.start_training).start()
     Thread(target = Wpns.start_training).start()
@@ -59,7 +65,7 @@ def startRecording():
     time.sleep(5)
 
 def startArtemisM1():
-    subprocess.run(['python', 'Start_Artemis_M1_E.py'])
+    start_script('Start_Artemis_M1_E.py')
     Thread(target = Helm.start_artemis_m1).start()
     Thread(target = Wpns.start_artemis_m1).start()
     Thread(target = Engr.start_artemis_m1).start()
@@ -69,50 +75,49 @@ def startSurvey1():
     Thread(target = Helm.start_survey1, args = (teamID,)).start()
     Thread(target = Wpns.start_survey1, args = (teamID,)).start()
     Thread(target = Engr.start_survey1, args = (teamID,)).start()
-    subprocess.run(['python', 'Take_Screenshot1_E.py', teamID])
+    start_script('Take_Screenshot1_E.py', teamID)
     time.sleep(5)
 
 def startM2():
     Thread(target = Helm.start_m2).start()
     Thread(target = Wpns.start_m2).start()
     Thread(target = Engr.start_m2).start()
-    subprocess.run(['python', 'Start_M2_E.py'])
+    start_script('Start_M2_E.py')
     time.sleep(5)
 
 def startSurvey2():
     Thread(target = Helm.start_survey2, args = (teamID,)).start()
     Thread(target = Wpns.start_survey2, args = (teamID,)).start()
     Thread(target = Engr.start_survey2, args = (teamID,)).start()
-    subprocess.run(['python', 'Take_Screenshot2_E.py', teamID])
+    start_script('Take_Screenshot2_E.py', teamID)
     time.sleep(5)
 
 def startM3():
     Thread(target = Helm.start_m3).start()
     Thread(target = Wpns.start_m3).start()
     Thread(target = Engr.start_m3).start()
-    subprocess.run(['python', 'Start_M3_E.py'])
+    start_script('Start_M3_E.py')
     time.sleep(5)
 
 def startSurvey3():
     Thread(target = Helm.start_survey3, args = (teamID,)).start()
     Thread(target = Wpns.start_survey3, args = (teamID,)).start()
     Thread(target = Engr.start_survey3, args = (teamID,)).start()
-    subprocess.run(['python', 'Take_Screenshot3_E.py', teamID])
+    start_script('Take_Screenshot3_E.py', teamID)
     time.sleep(5)
 
 def stopRecording():
     Thread(target = Helm.stop_recording).start()
     Thread(target = Wpns.stop_recording).start()
     Thread(target = Engr.stop_recording).start()
-    subprocess.run(['python', 'Stop_Artemis_E.py'])
+    start_script('Stop_Artemis_E.py')
     time.sleep(5)
 
-#not implemented yet
 def logVideo():
     Thread(target = Helm.move_video, args = (teamID,)).start()
     Thread(target = Wpns.move_video, args = (teamID,)).start()
     Thread(target = Engr.move_video, args = (teamID,)).start()
-    subprocess.run(['python', 'move_log_E.py', teamID])
+    start_script('move_log_E.py', teamID)
     time.sleep(5)
 
 

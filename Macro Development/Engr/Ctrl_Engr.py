@@ -1,59 +1,58 @@
 from xmlrpc.server import SimpleXMLRPCServer
+import socket
+import os
 import sys
 import subprocess
 import tkinter as tk
+import ctypes
 from tkinter import messagebox
 from threading import Thread
 
 coordinates = "200x100+550+400"
-IP_list = []
-
-try:
-    with open("C:\\ARTEMIS\\IP_LIST.txt") as file:
-        for line in file:
-            IP_list.append( line.strip().split(": ")[1] )
-except:
-    messagebox.showerror(title="Error", message="Could not find IP_LIST.txt")
-    sys.exit()
-
-try:
-    party = SimpleXMLRPCServer(( IP_list[2] , 4003), allow_none=True)
-except:
-    messagebox.showerror(title="Error", message="Wrong Engr IP,\nPlease update IP_LIST.txt")
-    sys.exit()
+IP = socket.gethostbyname(socket.gethostname()) #auto grabbing IP
+party = SimpleXMLRPCServer((IP, 4003), allow_none=True)
 
 def check():
     pass
 
+def start_script(script_name, *args):
+    bundle_dir = getattr(sys, '_MEIPASS', os.path.abspath(os.path.dirname(__file__)))
+    script_path = os.path.join(bundle_dir, script_name)
+    subprocess.run(['python', script_path, *args])
+
 def start_training():
-    subprocess.run(['python', 'Start_Training_P.py'])
+    start_script('Start_Training_P.py')
 
 def start_recording():
-    subprocess.run(['python', 'Start_Recording_P.py'])
+    start_script('Start_Recording_P.py')
 
 def start_artemis_m1():
-    subprocess.run(['python', 'Start_Artemis_M1_P.py'])
+    start_script('Start_Artemis_M1_P.py')
 
 def start_survey1(party_teamID):
-    subprocess.run(['python', 'Start_Survey1_P.py', party_teamID])
+    start_script('Start_Survey1_P.py', party_teamID)
 
 def start_m2():
-    subprocess.run(['python', 'Start_M2_P.py'])
+    start_script('Start_M2_P.py')
 
 def start_survey2(party_teamID):
-    subprocess.run(['python', 'Start_Survey2_P.py', party_teamID])
+    start_script('Start_Survey2_P.py', party_teamID)
 
 def start_m3():
-    subprocess.run(['python', 'Start_M3_P.py'])
+    start_script('Start_M3_P.py')
 
 def start_survey3(party_teamID):
-    subprocess.run(['python', 'Start_Survey3_P.py', party_teamID])
+    start_script('Start_Survey3_P.py', party_teamID)
 
 def stop_recording():
-    subprocess.run(['python', 'Stop_Recording_P.py'])
+    dir = getattr(sys, '_MEIPASS', os.path.abspath(os.path.dirname(__file__)))
+    ctypes_script_path = os.path.join(dir, 'Stop_Recording_P.py')
+    ctypes_script_path_quoted = f'"{ctypes_script_path}"'
+
+    ctypes.windll.shell32.ShellExecuteW(None, "runas", "python", ctypes_script_path_quoted, None, 0)
 
 def move_video(party_teamID):
-    subprocess.run(['python', 'move_video_P.py', party_teamID])
+    start_script('move_video_P.py', party_teamID)
 
 def stopMacro():
     if( messagebox.askyesno(title="!!! WARNING !!!", message="Are you sure?") ):
