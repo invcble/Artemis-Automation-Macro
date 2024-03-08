@@ -49,7 +49,7 @@ def stop_recording():
     ctypes_script_path = os.path.join(dir, 'Stop_Recording_P.py')
     ctypes_script_path_quoted = f'"{ctypes_script_path}"'
 
-    ctypes.windll.shell32.ShellExecuteW(None, "runas", "python", ctypes_script_path_quoted, None, 0)
+    ctypes.windll.shell32.ShellExecuteW(None, "runas", "python", ctypes_script_path_quoted, None, 5)
 
 def move_video(party_teamID):
     start_script('move_video_P.py', party_teamID)

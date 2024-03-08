@@ -9,6 +9,7 @@ time.sleep(2)
 os.system("taskkill /im Artemis.exe /f")
 time.sleep(5)
 
+print('\nStopping Kaltura Recording and Uploading...')
 kaltura = gw.getWindowsWithTitle("Kaltura Capture")[1]
 time.sleep(3)
 
