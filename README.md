@@ -1,4 +1,4 @@
-# Macro Project for Behavioural Research Study
+# Macro Development Project for Behavioral Research Study
 
 ## Introduction
 
