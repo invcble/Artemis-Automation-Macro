@@ -21,7 +21,7 @@ pag.mouseDown()
 pag.mouseUp()
 time.sleep(1)
 pag.write(passed_variable)
-time.sleep(1)
+time.sleep(2)
 pag.moveTo(1295,574) #Pressnext
 pag.mouseUp()
 pag.mouseDown()

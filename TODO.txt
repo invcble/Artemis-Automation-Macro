@@ -51,9 +51,6 @@
 
 -------------NOTES-------------
 
-increase recording button delay
-survey next button delay, ID populate delay increase
-make the browser fast
 include team ID in screenshot, video name
 just create an exe for stop recording, run as admins
 

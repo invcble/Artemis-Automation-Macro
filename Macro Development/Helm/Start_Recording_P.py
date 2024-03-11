@@ -16,7 +16,7 @@ time.sleep(1)
 pag.write("Kaltura Capture")
 time.sleep(1)
 pag.write(['enter'])
-time.sleep(15)
+time.sleep(20)
 
 pag.moveTo(638,338) #Startrecord
 pag.mouseDown()
