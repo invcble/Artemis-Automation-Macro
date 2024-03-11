@@ -16,6 +16,7 @@
 -->>Participants: Open Survey 1
 
 #Button: Start Mission 2
+====Experimenter: Ends game, Switches to Mission 2
 -->>Participants: Closes browser, Loads Mission 2
 ***Experimenter HAS CONTROL 
 
@@ -24,6 +25,7 @@
 -->>Participants: Open Survey 2
 
 #Button: Start Mission 3
+====Experimenter: Ends game, Switches to Mission 3
 -->>Participants: Closes browser, Loads Mission 3
 ***Experimenter HAS CONTROL 
 
@@ -32,6 +34,7 @@
 -->>Participants: Open Survey 3
 
 #Button: Stop Recording
+====Experimenter: Ends game, Closes Artemis
 -->>Participants: Closes browser, Closes Artemis, Stops Kaltura, save&upload
 
 #Button: Log, SS and Video
@@ -48,6 +51,11 @@
 
 -------------NOTES-------------
 
+increase recording button delay
+survey next button delay, ID populate delay increase
+make the browser fast
+include team ID in screenshot, video name
+just create an exe for stop recording, run as admins
 
 -------------------------------
 
