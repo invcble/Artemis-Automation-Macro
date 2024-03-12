@@ -1,7 +1,7 @@
 import os
 import time
-import pygetwindow as gw
 import pyautogui as pag
+import pydirectinput as pd
 
 time.sleep(1)
 os.system("taskkill /im surveybrowser.exe /f") #Closebrowser
@@ -10,33 +10,48 @@ os.system("taskkill /im Artemis.exe /f")
 time.sleep(5)
 
 print('\nStopping Kaltura Recording and Uploading...')
-kaltura = gw.getWindowsWithTitle("Kaltura Capture")[1]
-time.sleep(3)
+kaltura = pag.getWindowsWithTitle("Kaltura Capture")
+time.sleep(2)
 
-if kaltura:
-    if kaltura.isMinimized:
-        kaltura.restore()
-    kaltura.activate()
-time.sleep(2)
-pag.mouseUp()
+try:
+    kaltura[1].restore()
+except:
+    print("Issue restoring kaltura\nContinuing...")
 
-pag.moveTo(1455,1033) #Stoprecord
-pag.mouseUp()
 time.sleep(2)
-pag.mouseDown()
-pag.mouseUp()
-pag.moveTo(1510,923) #Stopconfirmation
+while True:
+    try:
+        kaltura[1].activate()
+        break
+    except:
+        print("retrying")
+        time.sleep(1)
+        print(".")
+        time.sleep(1)
+        print(".")
+        time.sleep(1)
+        print(".")
+
+time.sleep(4)
+pd.moveTo(1455,1033) #Stoprecord
 time.sleep(2)
-pag.mouseUp()
-pag.mouseDown()
-pag.mouseUp()
+pd.click()
+pd.moveTo(1510,923) #Stopconfirmation
+time.sleep(2)
+pd.click()
 time.sleep(5)
-pag.moveTo(1260,1029) #Save&upload
-pag.mouseUp()
-pag.mouseDown()
-pag.mouseUp()
+pd.moveTo(1260,1029) #Save&upload
+time.sleep(2)
+pd.click()
 time.sleep(3)
-pag.moveTo(1133,755) #Confirmupload
-pag.mouseUp()
-pag.mouseDown()
-pag.mouseUp()
+pd.moveTo(1133,755) #Confirmupload
+time.sleep(2)
+pd.click()
+        
+# time.sleep(3)
+# pd.moveTo(2530,1277)
+# time.sleep(0.5)
+# pd.click()
+# pd.moveTo(2133,188)
+# time.sleep(0.5)
+# pd.click()

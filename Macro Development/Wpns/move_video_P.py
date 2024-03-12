@@ -17,6 +17,8 @@ mp4_files = [file for file in files if file.endswith(".mp4")]
     
 for mp4_file in mp4_files:
     shutil.move( source + mp4_file, destination + mp4_file )
+    #RENAME
+    os.rename( destination + mp4_file, destination + passed_variable + '_Wpns_' + mp4_file )
 
 time.sleep(5)
 files = os.listdir(source) #Update files
