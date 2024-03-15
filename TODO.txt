@@ -51,7 +51,8 @@
 
 -------------NOTES-------------
 
-include team ID in screenshot, video name
+1000W - name
+reduce survey delay - restart pc
 just create an exe for stop recording, run as admins
 
 -------------------------------
@@ -60,10 +61,10 @@ Randomized experimental design on dynamic team composition
 supporting large research grant
 
 
-pyinstaller --onefile --add-data "Take_Screenshot1_E.py;." --add-data "Take_Screenshot2_E.py;." --add-data "Take_Screenshot3_E.py;." --add-data "Start_Artemis_M1_E.py;." --add-data "Start_M2_E.py;." --add-data "Start_M3_E.py;." --add-data "Stop_Artemis_E.py;." --add-data "move_log_E.py;." Ctrl_Experimenter_NEW.py
+pyinstaller --onefile --hide-console minimize-early --add-data "Take_Screenshot1_E.py;." --add-data "Take_Screenshot2_E.py;." --add-data "Take_Screenshot3_E.py;." --add-data "Start_Artemis_M1_E.py;." --add-data "Start_M2_E.py;." --add-data "Start_M3_E.py;." --add-data "Stop_Artemis_E.py;." --add-data "move_log_E.py;." Ctrl_Experimenter_NEW.py
 
 
-pyinstaller --onefile --add-data "Start_Survey1_P.py;." --add-data "Start_Survey3_P.py;." --add-data "Start_Survey2_P.py;." --add-data "Stop_Recording_P.py;." --add-data "move_video_P.py;." --add-data "Start_Artemis_M1_P.py;." --add-data "Start_M2_P.py;." --add-data "Start_M3_P.py;." --add-data "Start_Recording_P.py;." --add-data "Start_Training_P.py;." Ctrl_Helm.py
+pyinstaller --onefile --hide-console minimize-early --add-data "Start_Survey1_P.py;." --add-data "Start_Survey3_P.py;." --add-data "Start_Survey2_P.py;." --add-data "Stop_Recording_P.py;." --add-data "move_video_P.py;." --add-data "Start_Artemis_M1_P.py;." --add-data "Start_M2_P.py;." --add-data "Start_M3_P.py;." --add-data "Start_Recording_P.py;." --add-data "Start_Training_P.py;." Ctrl_Helm.py
 
 
 -------------SETUP-------------
@@ -71,6 +72,7 @@ pip install pyautogui
 pip install pyscreeze
 pip install pillow
 pip install xlsxwriter
+pip install pydirectinput
 
 create path C:/kaltura, assign to kaltura (reinstall)
 enable auto minimize when recording
