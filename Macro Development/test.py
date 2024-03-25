@@ -1,50 +1,39 @@
-# import pyautogui as pag
-# import pydirectinput
-# pag.FAILSAFE = False
-# import time
-
-
-# # win = pyautogui.getWindowsWithTitle("WhatsApp")
-# # if win:
-# #     kaltura = win[1] if len(win) > 1 else win[0]
-# #     if kaltura.isMinimized:
-# #         pyautogui.click(kaltura.left + 10, kaltura.top + 10) 
-# #     pyautogui.click(kaltura.left + 10, kaltura.top + 10)
-
-# while True:
-#     pag.moveTo(2511,1200)
-#     time.sleep(2)
-#     Kaltura_windows = pag.getWindowsWithTitle('Kaltura')
-
-#     # kaltura = next((win for win in Kaltura_windows), None)
-
-#     Kaltura_windows[1].restore()
-#     while True:
-#         try:
-#             Kaltura_windows[1].activate()
-#             break
-#         except:
-#             print("retrying")
-#             time.sleep(0.3)
-#             print(".")
-#             time.sleep(0.3)
-#             print(".")
-#             time.sleep(0.3)
-#             print(".")
-
-#     time.sleep(3)
-#     # pydirectinput.click(2511,1333)
-#     pydirectinput.moveTo(2511,1333)
-#     time.sleep(0.5)
-#     pydirectinput.click()
-#     # pag.moveTo(2511,1333)
-#     # time.sleep(2)
-#     # # pag.mouseUp()
-#     # # pag.mouseDown()
-#     # pag.click()
-#     # print(Kaltura_windows)
-
-
+import subprocess
+import time
+import sys
 import pyautogui as pag
+from tkinter import messagebox
+from threading import Thread
 
-print(pag.mouseInfo())
+Survey_link = []
+
+try:
+    with open("C:\\ARTEMIS\\SURVEY_LINK.txt") as file:
+        for line in file:
+            Survey_link.append( line.strip().split(": ")[1] )
+except:
+    messagebox.showerror(title="Error", message="Could not find SURVEY_LINK.txt")
+    sys.exit()
+
+passed_variable = sys.argv[1]
+URL = f"{Survey_link[0]}"
+
+def survey():
+    subprocess.Popen(["C:\\ARTEMIS\\surveybrowser.exe", URL], creationflags=subprocess.CREATE_NEW_CONSOLE)
+
+time.sleep(1)
+Thread(target=survey).start()
+time.sleep(25)
+
+#CHANGE COORDINATES
+pag.moveTo(750,440) #Gototextfield
+pag.mouseUp()
+pag.mouseDown()
+pag.mouseUp()
+time.sleep(1)
+pag.write(passed_variable)
+time.sleep(2)
+pag.moveTo(1295,574) #Pressnext
+pag.mouseUp()
+pag.mouseDown()
+pag.mouseUp()

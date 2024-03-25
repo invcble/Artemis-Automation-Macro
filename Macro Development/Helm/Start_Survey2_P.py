@@ -2,10 +2,21 @@ import subprocess
 import time
 import sys
 import pyautogui as pag
+from tkinter import messagebox
 from threading import Thread
 
+Survey_link = []
+
+try:
+    with open("C:\\ARTEMIS\\SURVEY_LINK.txt") as file:
+        for line in file:
+            Survey_link.append( line.strip().split(": ")[1] )
+except:
+    messagebox.showerror(title="Error", message="Could not find SURVEY_LINK.txt")
+    sys.exit()
+
 passed_variable = sys.argv[1]
-URL = 'https://drexel.qualtrics.com/jfe/form/SV_bClOWafnNkwIPrw'
+URL = f"{Survey_link[1]}"
 
 def survey():
     subprocess.Popen(["C:\\ARTEMIS\\surveybrowser.exe", URL], creationflags=subprocess.CREATE_NEW_CONSOLE)
