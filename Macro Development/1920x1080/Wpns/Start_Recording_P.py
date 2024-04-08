@@ -18,7 +18,7 @@ time.sleep(1)
 pag.write(['enter'])
 time.sleep(20)
 
-pag.moveTo(638,338) #Startrecord
+pag.moveTo(694,323) #Startrecord
 pag.mouseDown()
 pag.mouseUp()
 # time.sleep(8)

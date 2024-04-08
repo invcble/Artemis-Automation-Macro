@@ -33,20 +33,20 @@ while True:
         print(".")
 
 time.sleep(4)
-pd.moveTo(1455,1033) #Stoprecord
+pd.moveTo(1600,939) #Stoprecord
 time.sleep(2)
 pd.click()
-pd.moveTo(1510,923) #Stopconfirmation
+pd.moveTo(1584,849) #Stopconfirmation
 time.sleep(2)
 pd.click()
 time.sleep(5)
-pd.moveTo(1260,1029) #Save&upload
+pd.moveTo(1200,886) #Save&upload
 time.sleep(2)
 pd.click()
-time.sleep(3)
-pd.moveTo(1133,755) #Confirmupload
-time.sleep(2)
-pd.click()
+# time.sleep(3)
+# pd.moveTo(1133,755) #Confirmupload
+# time.sleep(2)
+# pd.click()
         
 # time.sleep(3)
 # pd.moveTo(2530,1277)

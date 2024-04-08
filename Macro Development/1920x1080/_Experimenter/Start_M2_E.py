@@ -3,11 +3,11 @@ import time
 
 
 time.sleep(1)
-pag.moveTo(1798,1079) #Endgame
+pag.moveTo(1793,969) #Endgame
 pag.mouseDown()
 pag.mouseUp()
 time.sleep(2)
-pag.moveTo(1537,394) #Layoutswitch
+pag.moveTo(1535,383) #Layoutswitch
 pag.mouseDown()
 pag.mouseUp()
 time.sleep(1)
