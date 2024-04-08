@@ -51,9 +51,6 @@
 
 -------------NOTES-------------
 
-1000W - name
-reduce survey delay - restart pc
-just create an exe for stop recording, run as admins
 
 -------------------------------
 
@@ -76,6 +73,9 @@ pip install pydirectinput
 
 create path C:/kaltura, assign to kaltura (reinstall)
 enable auto minimize when recording
+do not .(1) in name
+_internal, make it clear
+if not supported resolution https://github.com/radamar/Custom-Resolution-Utility-ToastyX
 
 disable UAC
 
