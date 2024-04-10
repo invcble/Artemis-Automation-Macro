@@ -10,7 +10,7 @@ time.sleep(1)
 pag.write(['enter'])
 time.sleep(3)
 
-pag.moveTo(264,540) #Startgame
+pag.moveTo(272,536) #Startgame
 pag.mouseDown()
 pag.mouseUp()
 time.sleep(5)

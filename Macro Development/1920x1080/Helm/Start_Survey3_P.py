@@ -26,14 +26,14 @@ Thread(target=survey).start()
 time.sleep(25)
 
 #CHANGE COORDINATES
-pag.moveTo(750,440) #Gototextfield
+pag.moveTo(607,447) #Gototextfield
 pag.mouseUp()
 pag.mouseDown()
 pag.mouseUp()
 time.sleep(1)
 pag.write(passed_variable)
 time.sleep(2)
-pag.moveTo(1295,574) #Pressnext
+pag.moveTo(1295,594) #Pressnext
 pag.mouseUp()
 pag.mouseDown()
 pag.mouseUp()

@@ -33,7 +33,7 @@ while True:
         print(".")
 
 time.sleep(4)
-pd.moveTo(1600,939) #Stoprecord
+pd.moveTo(1534,944) #Stoprecord
 time.sleep(2)
 pd.click()
 pd.moveTo(1584,849) #Stopconfirmation
